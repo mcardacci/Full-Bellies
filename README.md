@@ -2,7 +2,7 @@
 
 ## Core group
 #### Lowell Mower
-#### [a link](https://github.com/mcardacci)Marc Cardacci
+#### [Marc Cardacci](https://github.com/mcardacci)
 #### Ross Wilson
 #### John Lyden
 
