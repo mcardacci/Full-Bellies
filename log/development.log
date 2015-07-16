@@ -232,3 +232,28 @@ ORDER BY c.conname
   [1m[36mVendor Load (1.4ms)[0m  [1mSELECT "vendors".* FROM "vendors" INNER JOIN "favorite_vendors" ON "vendors"."id" = "favorite_vendors"."vendor_id" WHERE "favorite_vendors"."user_id" = $1[0m  [["user_id", 1]]
   [1m[35mVendor Load (0.9ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY "vendors"."id" ASC LIMIT 1
   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "favorite_vendors" ON "users"."id" = "favorite_vendors"."user_id" WHERE "favorite_vendors"."vendor_id" = $1[0m  [["vendor_id", 1]]
+
+
+Started GET "/" for ::1 at 2015-07-16 17:41:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1591ms (Views: 1590.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 17:41:46 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 17:41:46 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 17:41:46 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 17:41:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 17:41:46 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 17:41:46 -0400
