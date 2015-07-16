@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150716200410) do
     t.string   "email",           null: false
     t.string   "username",        null: false
     t.string   "password_digest", null: false
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.string   "profile_pic"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20150716200410) do
     t.string   "name",            null: false
     t.text     "bio"
     t.string   "address",         null: false
-    t.integer  "phone_num",       null: false
+    t.string   "phone_number"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

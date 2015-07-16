@@ -7,7 +7,7 @@ class CreateVendors < ActiveRecord::Migration
       t.string :name, null: false
       t.text :bio	
       t.string :address, null: false
-      t.integer :phone_num, null: false
+      t.string :phone_number
 
       t.timestamps null: false
     end
