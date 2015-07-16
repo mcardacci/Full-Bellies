@@ -1,8 +1,8 @@
 # Full-Bellies (working title)
 
 ## Core group
-#### Lowell Mower
+#### Lowell Mower(https://github.com/mcardacci)
 #### [Marc Cardacci](https://github.com/mcardacci)
-#### Ross Wilson
+#### [Ross Wilson](https://github.com/grapefruitricky)
 #### John Lyden
 
