@@ -421,3 +421,903 @@ NameError (undefined local variable or method `new_vendor_path' for #<SessionsCo
 
 
 Started PUT "/console/repl_sessions/73023372ce7170142eced16dcb043cdb" for ::1 at 2015-07-16 19:03:33 -0400
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:09:43 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:09:43 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:09:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:09:43 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:09:43 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:09:43 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:09:43 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:10:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NVX1dbyzXXJd6wjrY7ou3RlXoaqQhEerEhvv6/159a0cGV5dpsuJF4LcinHiRVaj/jXszNxgDU0KOUtQCom3+g==", "user"=>{"username"=>"lowell.mower@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "lowell.mower@gmail.com"]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.6ms)
+
+NameError (undefined local variable or method `new_user_path' for #<SessionsController:0x007f8374a08d78>):
+  app/controllers/sessions_controller.rb:14:in `user_create'
+
+
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.2ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (25.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (62.1ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:11:09 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NVX1dbyzXXJd6wjrY7ou3RlXoaqQhEerEhvv6/159a0cGV5dpsuJF4LcinHiRVaj/jXszNxgDU0KOUtQCom3+g==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:11:09 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 391ms (Views: 390.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:11:22 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NVX1dbyzXXJd6wjrY7ou3RlXoaqQhEerEhvv6/159a0cGV5dpsuJF4LcinHiRVaj/jXszNxgDU0KOUtQCom3+g==", "vendor"=>{"username"=>"ross", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mVendor Load (0.4ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1  [["username", "ross"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:11:22 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:12:16 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NVX1dbyzXXJd6wjrY7ou3RlXoaqQhEerEhvv6/159a0cGV5dpsuJF4LcinHiRVaj/jXszNxgDU0KOUtQCom3+g==", "vendor"=>{"username"=>"ross", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mVendor Load (0.3ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1[0m  [["username", "ross"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:12:16 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:12:19 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 149ms (Views: 58.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:12:19 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:12:19 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:12:19 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:12:19 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:12:19 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:12:19 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:12:21 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U4t8c9F9CqRBIRu0MdSzvZPv/zXi3/w+W+aBgJP9PbR6x9dbywXewZ4WmS6wK8vDdI2yU647tthDxCU7ZA1/4w==", "user"=>{"username"=>"lowell.mower@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "lowell.mower@gmail.com"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:12:21 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:12:24 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uJAfmuF0J1a8EY1bchC1duoV6kgrC8zJ+AP64MKEzaGR3LSy+wzzM2MmD8Hz780IDXenLmfvhi/gIV5bNXSP9g==", "vendor"=>{"username"=>"lowell.mower@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mVendor Load (0.3ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1[0m  [["username", "lowell.mower@gmail.com"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:12:24 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 101ms (Views: 100.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:12:31 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwlrnPSMaj2pcpCfWH5SwCsuW+yG0vt1U09r3pvLszI+RcC07vS+WHZFEgXZgSq+zEwWiso2sZNLbc9lbDvxZQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:12:31 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:13:14 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwlrnPSMaj2pcpCfWH5SwCsuW+yG0vt1U09r3pvLszI+RcC07vS+WHZFEgXZgSq+zEwWiso2sZNLbc9lbDvxZQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 377762ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:19:32 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 284ms (Views: 281.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:19:46 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 663ms (Views: 437.1ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:19:59 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K9kbasZ2WPwpkyapuYXLXxp1sfcbdrBWTxgreJS9h28ClbBC3A6MmfakpDM4erMh/Rf8kVeS+rBXOo/DY03FOA==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 6988ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:20:06 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 316ms (Views: 314.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:20:29 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5PzMIGV4rdCB6J4v3GMg3OvsR8bIIH/kieOMx1yzQeTNsGcIfwB5tV7fHLVdnFiiDI4KoITENQKRwSh8q0MDsw==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 139ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:20:30 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (95.1ms)
+Completed 200 OK in 378ms (Views: 311.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:21:15 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 763ms (Views: 473.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:21:16 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:21:16 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:21:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:21:17 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:21:17 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:21:17 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:21:27 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5l7G26oEdvg0cPsWpJzga2/7ZUuVdjIj0JVpslN2aJTPEm3zsHyinetHeYwlY5gViJkoLdmSeMXIt80JpIYqww==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 179ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:21:27 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 612ms (Views: 607.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:22:25 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Vrj4t/5Jhb+HDC976YBqUKQb2tKh7IduDbj+MmIeGr4FkjKxYHycyErsiduWXnXpfIiDQZj+PugFEdDPng6PQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 119771ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:24:26 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 530ms (Views: 313.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:24:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 455ms (Views: 421.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:24:40 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:24:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:24:40 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:24:40 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:24:40 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:24:40 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:24:46 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0yusbd1An3cFEQ+FyX+Uqt4/Pc+r94h2caaXuBEQDQb6ZwdFxzhLEtomjR9IgOzUOV1wqecTwpBphDMD5uBPUQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:24:46 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:24:56 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:25:02 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZVfSH6ZjtcvYKwjuxwOFcTL9Kt8M8fAh/17CgxNb72M2fRgZOFasvBXLrk643ZrI6m5zTDXjSaf39+x+70t6g==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:25:02 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:25:09 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZVfSH6ZjtcvYKwjuxwOFcTL9Kt8M8fAh/17CgxNb72M2fRgZOFasvBXLrk643ZrI6m5zTDXjSaf39+x+70t6g==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:25:09 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:25:36 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 64ms (Views: 28.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:25:36 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:25:36 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:25:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:25:36 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:25:36 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:25:36 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:25:41 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1jZz/wpC1aS6XAB6WCRuOl2RycZRsF5jjD/X1FuCPHz/etjXEDoBwWVrguDZ2xZEuvOEoB1UFIWUHXNvrHJ+Kw==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:25:41 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:25:57 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 147ms (Views: 19.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:25:57 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:25:57 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:25:57 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:25:57 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:25:57 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:25:57 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:26:03 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2k/uOCV2dpx9naqgdLu/tzw8Kz5ZvUXmpS2/3GpTsyfzA0UQPw6i+aKqKDr1RMfJ215mWBVZDwC9DxtnnaPxcA==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:26:03 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:26:10 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OXunrIRMJBmSVHlPLpKqIsRUxnpUDS6T0LRtw9n6Dd8QNwyEnjTwfE1j+9WvbdJcIzaLHBjpZHXIlsl4LgpPiA==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:26:10 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:27:13 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 153ms (Views: 125.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:27:13 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:27:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:27:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:27:13 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:27:13 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:27:13 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:27:18 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/npQPUDwpE1PSZq5C6dBeGjvsSuKrcqRw3/VvmZeg9DXNvsVWohwKJB+GCOKWDkGj438TcZJgHfbXXEFka7Bhw==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 117ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:27:18 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:27:24 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:27:24 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:27:24 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:27:24 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:27:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:27:24 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:27:24 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:27:32 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+Bfk/YoIo1TlKI29vIlywXdzK8YD7i77mtAWlCZ4MYyrPS77FD26IyjIKx3DV214r+ByVTr8l32SeThp2mikQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 91ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:27:32 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:28:15 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:28:15 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:28:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:28:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:28:15 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:28:15 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:28:15 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:28:25 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VqAQDRQK7dcFuB5PhZjO4VrHQAcgv7rcJz6zgqCOG4d/7LslDnI5stqPnNUEZ7afvaUNYWxb8Do/HBc5V35Z0A==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 93ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:28:25 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:28:31 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qfv0Nj0CBjRxkRnyazFRWZAigNUvv/0bvcTV6mYU3UFot18eJ3rSUa6mm2jqziknd0DNs2Nbt/2l5nFRkeSfFg==", "vendor"=>{"username"=>"ross", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mVendor Load (0.5ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1[0m  [["username", "ross"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:28:31 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:28:38 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:28:38 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:28:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:28:38 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:28:38 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:28:38 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:28:38 -0400
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:28:42 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgYQQl5Lp1jQQafUra8zvrkPrXHFoMzk+O+ndMJIZDwbSrtqRDNzPQ92JU4sUEvAXm3gF4lEhgLgzQPPNbgmaw==", "vendor"=>{"username"=>"ross", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mVendor Load (0.3ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1  [["username", "ross"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:28:42 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 18ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:30:13 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgYQQl5Lp1jQQafUra8zvrkPrXHFoMzk+O+ndMJIZDwbSrtqRDNzPQ92JU4sUEvAXm3gF4lEhgLgzQPPNbgmaw==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 130189ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:32:23 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 524ms (Views: 345.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:32:27 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 287ms (Views: 285.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:32:28 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:32:28 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:32:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:32:28 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:32:28 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:32:28 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:32:33 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IuGFI0Bi2RgapHRjY+WvabKk9yPjQrjycTYzB1n7+W4LrS4LWhoNfcWT9vniGtcXVca6Ra+m8hRpFJe8rgu7OQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 154142ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:35:07 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (126.3ms)
+Completed 200 OK in 1066ms (Views: 676.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:35:14 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (119.9ms)
+Completed 200 OK in 614ms (Views: 609.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:35:14 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:35:14 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:35:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:35:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:35:15 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:35:15 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:35:20 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s3LJT/kC0BP0pCJoxeig/H3G8pLiPIwC0ckJKHYdPbuaPmJn43oEdiuToPJEF9iCmqS/9K7YxuTJ662Tge1/7A==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 128604ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:37:28 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 1061ms (Views: 650.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:37:31 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (108.7ms)
+Completed 200 OK in 633ms (Views: 628.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:37:32 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:37:32 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:37:32 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:37:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:37:32 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:37:32 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:37:37 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owaLOjr614OnIvSUKorCQgRVgkVn3X/8vDfgbsaWGAiKSiASIIID5ngVdg6rdbo84zfPIys5NRqkFUTVMWZaXw==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.5ms)
+
+RuntimeError (You want to finish 2 frames, but stack size is only -8):
+  app/controllers/sessions_controller.rb:10:in `user_create'
+
+
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (567.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (119.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.0ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (739.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (67.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (121.1ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (3.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.1ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (196.6ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:38:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 459ms (Views: 419.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:38:08 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 94ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:38:13 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VTPUnTkbYgrRclKRQGvJZpsiGW3sfos5hGVFXB/hBQZ8f3+1I2O2bw5F0AvBlLEYfEBUC6Cawd+cR+Hn6BFHUQ==", "user"=>{"username"=>"Lowell", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "Lowell"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 83065ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:39:36 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (115.3ms)
+Completed 200 OK in 337ms (Views: 334.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["email", "lowell@example.com"], ["password_digest", "$2a$10$AaLmdo1NRdKCAg9irUkZPOdAFhOVmXqA0jk7W2ikQZMnOm.MJY1Ju"], ["username", "alex"], ["created_at", "2015-07-16 23:40:22.532872"], ["updated_at", "2015-07-16 23:40:22.532872"]]
+  [1m[36m (13.6ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:40:32 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 591ms (Views: 329.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 19:40:33 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 19:40:34 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 19:40:34 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 19:40:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 19:40:34 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 19:40:34 -0400
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:40:46 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0dM6oVEoHeWzcDq6OfGMXzrvLb/iaK8pSTbyq3Dhvtz4n5GJS1DJgGxHuCC4DvQh3Y1g2a6M5c9RFFYQhxH8iw==", "user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "alex"]]
+Completed 500 Internal Server Error in 137973ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/sessions_controller.rb:12:in `user_create'
+
+
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (587.0ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (118.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (756.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.8ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.1ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (66.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (286.8ms)
+
+
+Started GET "/login" for ::1 at 2015-07-16 19:43:30 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 731ms (Views: 433.1ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:43:32 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 462ms (Views: 460.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:43:32 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (95.2ms)
+Completed 200 OK in 380ms (Views: 377.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:43:38 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ja1xQk7xDokWgxxUWG2i0sJTovIVkKOVoopuOwPjLAgM4dpqVIna7Mm0ns7ZktqsJTHvlFl06XO6qMqA9BNuXw==", "user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "alex"]]
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/sessions_controller.rb:11:in `user_create'
+
+
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (261.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (68.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (399.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.3ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:43:55 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ja1xQk7xDokWgxxUWG2i0sJTovIVkKOVoopuOwPjLAgM4dpqVIna7Mm0ns7ZktqsJTHvlFl06XO6qMqA9BNuXw==", "user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "alex"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 243ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:43:56 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 306ms (Views: 303.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 19:44:01 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ja1xQk7xDokWgxxUWG2i0sJTovIVkKOVoopuOwPjLAgM4dpqVIna7Mm0ns7ZktqsJTHvlFl06XO6qMqA9BNuXw==", "user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "alex"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 128ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:44:01 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 478ms (Views: 412.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:44:07 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"emjn+zmPoqKY5+/XpkT08D/EskY0o64J1LwNvu93Pw5TJEzTI/d2x0fQbU0nu4yO2Kb/IHhH5O/MnqkFGId9WQ==", "vendor"=>{"username"=>"ross", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mVendor Load (1.2ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1[0m  [["username", "ross"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 19:44:07 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 298ms (Views: 296.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_vendor" for ::1 at 2015-07-16 19:44:11 -0400
+Processing by SessionsController#vendor_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"emjn+zmPoqKY5+/XpkT08D/EskY0o64J1LwNvu93Pw5TJEzTI/d2x0fQbU0nu4yO2Kb/IHhH5O/MnqkFGId9WQ==", "vendor"=>{"username"=>"ross", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[35mVendor Load (0.5ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."username" = $1 LIMIT 1  [["username", "ross"]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 102ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 19:44:11 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (103.0ms)
+Completed 200 OK in 386ms (Views: 383.5ms | ActiveRecord: 0.0ms)
