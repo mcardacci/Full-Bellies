@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
   end
 
   def user_create
-    @user = User.find_by(username: user_params[:username])
-    if @user && @user.password == params[:password]
-      session[:user_id] = @user.id
+    user = User.find_by(username: user_params[:username])
+    if user && user.authenticate(user_params[:password])
+      session[:user_id] = user.id
       redirect_to root_path
     else
-      redirect_to new_user_path
+      redirect_to new_session_path
     end
   end
 
@@ -21,12 +21,12 @@ class SessionsController < ApplicationController
   end
 
   def vendor_create
-    @vendor = Vendor.find_by(username: vendor_params[:username])
-    if @vendor && @vendor.password == params[:password]
-      session[:vendor_id] = @vendor.id
+    vendor = Vendor.find_by(username: vendor_params[:username])
+    if vendor && vendor.authenticate(vendor_params[:password])
+      session[:vendor_id] = vendor.id
       redirect_to root_path
     else
-      redirect_to new_vendor_path
+      redirect_to new_session_path
     end
   end
 
