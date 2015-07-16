@@ -1,7 +1,7 @@
 # Full-Bellies (working title)
 
 ## Schema
-![Schema](filepath)
+![Schema](/app/assets/images/full-bellies-schema.png)
 
 ## Trello Board
 [Full Bellies Board](https://trello.com/b/KCCdiimC/full-bellies)
