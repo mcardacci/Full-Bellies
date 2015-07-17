@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :vendors
   resources :deals
   resources :user
+  resources :purchased_items, only: [:new, :create]
 
   get '/vendors/:id/text' => 'vendors#send_sms', as: 'text'
   # Example of regular route:
