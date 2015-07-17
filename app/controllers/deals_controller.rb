@@ -25,7 +25,9 @@ class DealsController < ApplicationController
   end
 
   def update
-
+    @deal = Deal.find(params[:id])
+    @deal.update_attributes(deal_params)
+    redirect_to current_vendor
   end
 
   def show
