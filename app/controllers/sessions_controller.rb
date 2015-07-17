@@ -15,11 +15,6 @@ class SessionsController < ApplicationController
     end
   end
 
-  def user_destroy
-    session[:user_id] = nil
-    redirect_to root_path
-  end
-
   def vendor_create
     vendor = Vendor.find_by(username: vendor_params[:username])
     if vendor && vendor.authenticate(vendor_params[:password])
@@ -30,7 +25,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def vendor_destroy
+  def destroy
+    session[:user_id] = nil
     session[:vendor_id] = nil
     redirect_to root_path
   end
