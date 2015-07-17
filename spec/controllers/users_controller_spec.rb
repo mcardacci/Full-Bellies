@@ -88,14 +88,14 @@ describe UserController do
         end
 
         it "changes the contact's attributes" do
-          put :update, id: @user, contact: attributes_for(:user, email: "larry@example.com", username: "larry")
+          put :update, id: @user, user: attributes_for(:user, email: "larry@example.com", username: "larry")
           @user.reload
           expect(@user.email).to eq "larry@example.com"
           expect(@user.username).to eq "larry"
         end
 
         it "redirects to the updated user" do
-          put :update, id: @user, contact: attributes_for(:user)
+          put :update, id: @user, user: attributes_for(:user)
           expect(response).to redirect_to @user
         end
       end
@@ -110,7 +110,7 @@ describe UserController do
           put :update, id: @user, user: attributes_for(:user, username: "Larry", email: nil)
           @user.reload
           expect(@user.username).not_to eq("Larry")
-          expect(@user.email).to eq("bob@gmail.com")
+          expect(@user.email).to eq("bob@example.com")
         end
 
         it "re-renders the edit method" do
