@@ -6,7 +6,6 @@ class DealsController < ApplicationController
 
   def new
     @deal = Deal.new
-
   end
 
   def create
@@ -17,7 +16,6 @@ class DealsController < ApplicationController
       flash[:notice] = "all fields are required."
       redirect_to new_deal_path
     end
-
   end
 
   def edit
@@ -35,7 +33,9 @@ class DealsController < ApplicationController
   end
 
   def destroy
-
+    deal = Deal.find(params[:id])
+    deal.destroy
+    redirect_to current_vendor
   end
 
   private
