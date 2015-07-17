@@ -21,6 +21,27 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find(params[:id])
   end
 
+  def edit
+    @vendor = Vendor.find(params[:id])
+  end
+
+  def update
+    @vendor = Vendor.find(params[:id])
+    @vendor.assign_attributes(vendor_params)
+    if @vendor.save
+      redirect_to root_path, flash[:notice] = "Successfully edited account"
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @vendor = Vendor.find(params[:id])
+    @vendor.destroy
+    session[:vendor_id] = nil
+    redirect_to root_path
+  end
+
   private
 
     def vendor_params
