@@ -17,12 +17,13 @@ describe User do
   it "is invalid without a username" do
     user = FactoryGirl.build(:user, username: nil)
     user.valid?
-    byebug
     expect(user.errors[:username]).to include("can't be blank")
   end
 
   it "is invalid without an email" do
-    expect(build(:user, email: nil).errors[:email]).to include("can't be blank")
+    user = build(:user, email: nil)
+    user.valid?
+    expect(user.errors[:email]).to include("can't be blank")
   end
 
   it "is invalid with a duplicate email address" do
