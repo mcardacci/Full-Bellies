@@ -1,12 +1,12 @@
 class ChargesController < ApplicationController
 
 	def index
-		@price_header = "($00.50)"
-		@price_btn = 50
+	  @price_header = "($00.50)"
+	  @price_btn = 50
 	end
 
 	def create
-		# set hidden field in form and capture the @amount in params
+       	  # set hidden field in form and capture the @amount in params
 	  @amount = 500
 
 	  customer = Stripe::Customer.create(
