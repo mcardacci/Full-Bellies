@@ -41,8 +41,8 @@ class UserController < ApplicationController
   end
 
   def send_email
-    @user = User.find(params[:id])
-    UserMailer.welcome_email(@user).deliver_now
+    @user = User.find_by(username: "lowellmower")
+    UserMailer.welcome_email(@user).deliver
     redirect_to @user
   end
 
