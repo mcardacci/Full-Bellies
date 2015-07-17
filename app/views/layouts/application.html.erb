@@ -9,18 +9,18 @@
 <body>
   <nav>
     <% if session[:user_id] || session[:vendor_id] %>
-			<%= link_to 'Logout', logout_path, method: 'delete' %>
-			<% if session[:vendor_id] %>
-				<%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %>
-			<% else %>
-				<%= link_to 'Profile Page', user_path(session[:user_id]) %>
-			<% end %>
-		<% else %> 
-			<%= link_to 'Login', login_path %><span class="vendor-nav"><%= link_to 'Are you a business?', login_path %></span>
-			<%= link_to 'Signup', new_user_path %>
-		<% end %> 
-		<%= link_to 'Deals', deals_path %>
-	</nav>
+      <%= link_to 'Logout', logout_path, method: 'delete' %>
+      <% if session[:vendor_id] %>
+	<%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %>
+      <% else %>
+	<%= link_to 'Profile Page', user_path(session[:user_id]) %>
+      <% end %>
+    <% else %> 
+      <%= link_to 'Login', login_path %><span class="vendor-nav"><%= link_to 'Are you a business?', login_path %></span>
+      <%= link_to 'Signup', new_user_path %>
+    <% end %> 
+    <%= link_to 'Deals', deals_path %>
+  </nav>
 <%= yield %>
 </body>
 </html>
