@@ -27,7 +27,7 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
     @user.assign_attributes(user_params)
     if @user.save
-      redirect_to root_path, flash[:notice] = "Successfully edited account"
+      redirect_to user_path(@user.id)
     else
       render :edit
     end
