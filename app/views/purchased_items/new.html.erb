@@ -1,0 +1,18 @@
+<h2><%= @deal.title %></h2> <br/>
+<p><%= @deal.description%></p><br/>
+<p>quantity: <%=@deal.item_quantity%></p><br/>
+<p>price per item: <span id='dealprice'><%= @deal.item_price %></span></p><br/>
+<%= form_tag(controller: "purchased_items", action: "create") do %>
+  <%= hidden_field_tag :deal_id,  @deal.id %><br/>
+  <%= hidden_field_tag :title, @deal.title %><br/>
+  <%= hidden_field_tag :description, @deal.description %><br/>
+  <%= label_tag :quantity %><br/>
+  <input type="number" name="quantity" id="purchaseitemquantity"><br/>
+  <%= label_tag :price %>
+  <span id="purchaseitemprice">0</span>
+    <br/>
+  <script id='stripeform'src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="A month's subscription">
+  </script>
+<% end %>
