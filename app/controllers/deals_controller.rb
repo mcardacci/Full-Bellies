@@ -10,18 +10,18 @@ class DealsController < ApplicationController
   end
 
   def create
-    binding.pry
-    @deal = Deal.new(deal_params)
-    if @deal.update_attributes(vendor_id: current_vendor.id) && @deal.save
+    deal = Deal.new(deal_params, vendor_id: current_vendor.id)
+    if deal.save
       redirect_to current_vendor
     else
-      redirect_to :back
       flash[:notice] = "all fields are required."
+      redirect_to new_deal_path
     end
 
   end
 
   def edit
+    @deal = Deal.find(params[:id])
   end
 
   def update
@@ -29,7 +29,7 @@ class DealsController < ApplicationController
   end
 
   def show
-
+    @deal = Deal.find(params[:id])
   end
 
   def destroy
