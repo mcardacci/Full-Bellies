@@ -42,6 +42,11 @@ class VendorsController < ApplicationController
     redirect_to root_path
   end
 
+  def send_sms
+    byebug
+    send_followers_sms
+  end
+
   private
 
     def vendor_params
