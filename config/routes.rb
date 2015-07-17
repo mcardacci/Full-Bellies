@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
 
   get '/vendors/:id/text' => 'vendors#send_sms', as: 'text'
-  get '/user/:id/email' => 'user#send_email', as: 'email'
+  get '/vendors/:id/email' => 'vendors#send_email', as: 'email'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
