@@ -4,6 +4,12 @@ class Vendor < ActiveRecord::Base
 	has_many :users, through: :favorite_vendors
 	has_many :deals
 
+  validates :email, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :password_digest, presence: true
+  validates :address, presence: true
+
   def send_followers_sms
     acct_sid = ENV["TWILIO_ACCT_SID"]
     auth_token = ENV["TWILIO_AUTH"]
@@ -20,3 +26,5 @@ class Vendor < ActiveRecord::Base
   end
 
 end
+
+
