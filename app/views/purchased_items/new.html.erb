@@ -1,0 +1,14 @@
+<h2><%= @deal.title %></h2> <br/>
+<p><%= @deal.description%></p><br/>
+<p>quantity: <%=@deal.item_quantity%></p><br/>
+<p>price per item: <%= @deal.item_price %></p><br/>
+<%= form_for @purchased_item, url: '/deals/#{@deal.id}/purchased_items' do |f| %>
+  <%= f.hidden_field :deal_id, value: @deal.id %><br/>
+  <%= f.hidden_field :title, value: @deal.title %><br/>
+  <%= f.hidden_field :description, value: @deal.description %><br/>
+  <%= f.label :quantity, size: 6 %><br/>
+  <%= f.number_field :quantity %><br/>
+  <%= f.label :price %><br/>
+  <%= f.number_field :price, size: 6, step: 0.01 %><br/>
+  <%= f.submit %>
+<% end %>
