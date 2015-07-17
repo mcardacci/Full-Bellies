@@ -7,13 +7,25 @@
 <div class="restaurant-description">
 	<p>Located just outside the slums of bushwick</p>
 </div>
-<form action="" method="POST">
+<!-- <form action="" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_qFJYnRoTE5TmYSYkelFbAjNp"
     data-amount="<%= @price_btn %>"
     data-name="Demo Site"
     data-description="1 pizza <%= @price_header %>"
-    data-image="<%= File.expand_path('image.jpg') %>">
+    data-image="">
   </script>
-</form>
+</form> -->
+<%= form_tag charges_path do %>
+  <article>
+    <label class="amount">
+      <span>Amount: $5.00</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="500"></script>
+<% end %>
