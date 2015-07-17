@@ -30,6 +30,7 @@ class UserController < ApplicationController
       redirect_to root_path, flash[:notice] = "Successfully edited account"
     else
       render :edit
+    end
   end
 
   def destroy
