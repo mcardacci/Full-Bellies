@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post '/login_vendor' => 'sessions#vendor_create'
   delete '/logout' => 'sessions#destroy'
 
+  resources :vendors
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
