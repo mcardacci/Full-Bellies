@@ -1,11 +1,11 @@
 class DealsController < ApplicationController
 
-
   def index
-
+    @deals = Deal.order(:created_at :desc)
   end
 
   def new
+    @deal = Deal.new
 
   end
 
