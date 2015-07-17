@@ -1,0 +1,5 @@
+<ul>
+  <% @deals.each do |deal| %>
+    <%=render partial: '/deals/deal', locals: {deal: deal} %>
+  <% end %>
+</ul>
