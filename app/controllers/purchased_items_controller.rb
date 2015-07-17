@@ -10,6 +10,7 @@ class PurchasedItemsController < ApplicationController
     purchased_item.update_attributes(price: calculate_price(params[:quantity], deal), user_id: current_user.id)
 
 
+
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
       :card  => params[:stripeToken]
@@ -17,7 +18,7 @@ class PurchasedItemsController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => calculate_price(params[:quantity], deal),
+      :amount      => calculate_stripe_amount(params[:quantity], deal),
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
@@ -31,11 +32,15 @@ class PurchasedItemsController < ApplicationController
   end
 
   def calculate_price(quantity, deal)
-    return quantity * deal.item_price
+    return quantity.to_i * deal.item_price.to_f
   end
 
   def current_user
     return User.find(session[:user_id]) if !!session[:user_id]
+  end
+
+  def calculate_stripe_amount(quantity, deal)
+    (calculate_price(quantity, deal) * 100).to_i
   end
 
 
