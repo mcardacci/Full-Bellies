@@ -1,11 +1,11 @@
 <h1>Grandma's pizza</h1>
 
 <div class="item-description">
-	<p>This is the best pizza in the world</p>
+  <p>This is the best pizza in the world</p>
 </div>
 <p>#picture#</p>
 <div class="restaurant-description">
-	<p>Located just outside the slums of bushwick</p>
+  <p>Located just outside the slums of bushwick</p>
 </div>
 
 <%= form_tag charges_path do %>
@@ -17,7 +17,8 @@
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"></script>
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="A month's subscription"
+    data-amount="500">
+  </script>
 <% end %>
