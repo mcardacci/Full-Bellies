@@ -25,7 +25,6 @@ describe UserController do
           expect{ post :create, user: attributes_for(:user)}.to change(User, :count).by(1)
         end
 
-        ### uncomment when pull changes
         it "redirects to user#show" do
           post :create, user: attributes_for(:user)
           expect(response).to redirect_to user_path(assigns[:user])
@@ -41,6 +40,25 @@ describe UserController do
         it "does not save the user in the database" do
           expect{ post :create, user: attributes_for(:invalid_user)}.not_to change(User, :count)
         end
+
+        it "re-directs to new user signup" do
+          post :create, user:attributes_for(:invalid_user)
+          expect(response).to redirect_to new_user_path
+        end
+      end
+    end
+
+    describe 'GET #show' do
+      it "renders the :show template" do
+        user = create(:user)
+        get :show, id: user
+        expect(response).to render_template :show
+      end
+
+      it "assigns the requested user to @user" do
+        user = create(:user)
+        get :show, id: user
+        expect(assigns(:user)).to eq user
       end
     end
   end
