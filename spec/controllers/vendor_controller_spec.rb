@@ -6,4 +6,5 @@ describe VendorContrller do
 			@vendor = create(:vendor)
 			session[:vendor_id] = @vendor.id
 		end
+		
 end
