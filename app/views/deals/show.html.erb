@@ -2,3 +2,7 @@
 <p><%= @deal.description%></p><br/>
 <p>quantity: <%=@deal.item_quantity%></p><br/>
 <p>price per item: <%= @deal.item_price %></p>
+
+<% if current_vendors_deal?(@deal) %>
+  <%= link_to 'edit', edit_deal_path(@deal.id) %>
+<% end %>
