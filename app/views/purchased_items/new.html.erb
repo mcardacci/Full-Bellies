@@ -11,9 +11,8 @@
   <%= label_tag :price %>
   <span id="purchaseitemprice">0</span>
     <br/>
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  <script id='stripeform'src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-description="A month's subscription"
-    data-amount="500">
+    data-description="A month's subscription">
   </script>
 <% end %>
