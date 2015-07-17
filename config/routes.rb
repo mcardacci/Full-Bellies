@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :vendors
-  resources :deals
+  resources :deals do
+    resources :purchased_items, only: [:new, :create]
+  end
   resources :user
-  resources :purchased_items, only: [:new, :create]
+
 
   get '/vendors/:id/text' => 'vendors#send_sms', as: 'text'
   # Example of regular route:
