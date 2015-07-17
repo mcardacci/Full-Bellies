@@ -1,14 +1,19 @@
 <h2><%= @deal.title %></h2> <br/>
 <p><%= @deal.description%></p><br/>
 <p>quantity: <%=@deal.item_quantity%></p><br/>
-<p>price per item: <%= @deal.item_price %></p><br/>
-<%= form_for @purchased_item, url: '/deals/#{@deal.id}/purchased_items' do |f| %>
-  <%= f.hidden_field :deal_id, value: @deal.id %><br/>
-  <%= f.hidden_field :title, value: @deal.title %><br/>
-  <%= f.hidden_field :description, value: @deal.description %><br/>
-  <%= f.label :quantity, size: 6 %><br/>
-  <%= f.number_field :quantity %><br/>
-  <%= f.label :price %><br/>
-  <%= f.number_field :price, size: 6, step: 0.01 %><br/>
-  <%= f.submit %>
+<p>price per item: <span id='dealprice'><%= @deal.item_price %></span></p><br/>
+<%= form_tag(controller: "purchased_items", action: "create") do %>
+  <%= hidden_field_tag :deal_id,  @deal.id %><br/>
+  <%= hidden_field_tag :title, @deal.title %><br/>
+  <%= hidden_field_tag :description, @deal.description %><br/>
+  <%= label_tag :quantity %><br/>
+  <input type="number" name="quantity" id="purchaseitemquantity"><br/>
+  <%= label_tag :price %>
+  <span id="purchaseitemprice">0</span>
+    <br/>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="A month's subscription"
+    data-amount="500">
+  </script>
 <% end %>
