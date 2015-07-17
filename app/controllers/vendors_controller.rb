@@ -43,8 +43,9 @@ class VendorsController < ApplicationController
   end
 
   def send_sms
-    byebug
-    send_followers_sms
+    @vendor = Vendor.find(params[:id])
+    @vendor.send_followers_sms
+    redirect_to vendor_path(@vendor.id)
   end
 
   private
