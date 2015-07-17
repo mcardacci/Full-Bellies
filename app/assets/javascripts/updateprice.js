@@ -1,7 +1,8 @@
 $(document).ready(function(){
   $('#purchaseitemquantity').change(function(){
-    var $price = parseInt($('#dealprice').text()) * parseInt($('#purchaseitemquantity').val());
+    var $price = parseFloat($('#dealprice').text()) * parseFloat($('#purchaseitemquantity').val());
     $price = $price.toString();
+
     $('#purchaseitemprice').html($price);
   })
 })
