@@ -40,12 +40,6 @@ class UserController < ApplicationController
     redirect_to root_path
   end
 
-  def send_email
-    @user = User.find_by(username: "lowellmower")
-    UserMailer.welcome_email(@user).deliver
-    redirect_to @user
-  end
-
   private
 
   def user_params
