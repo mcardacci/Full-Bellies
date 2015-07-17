@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
 	has_many :deals, through: :purchased_items
 	has_many :favorite_vendors
 	has_many :favorites, through: :favorite_vendors, source: :vendor
+
+  validates :email, presence: true
+  validates :username, presence: true
+
 end
