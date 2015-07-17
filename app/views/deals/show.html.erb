@@ -5,4 +5,5 @@
 
 <% if current_vendors_deal?(@deal) %>
   <%= link_to 'edit', edit_deal_path(@deal.id) %>
+  <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
 <% end %>
