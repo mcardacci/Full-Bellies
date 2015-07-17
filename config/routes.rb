@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :deals
   resources :user
 
+  get '/vendors/:id/text' => 'vendors#send_sms', as: 'text'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
