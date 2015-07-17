@@ -1,2 +1,10 @@
 <h1>meow</h1>
 
+<% if session[:user_id] %>
+<p>user id:</p>
+<%= session[:user_id] %>
+<% end %>
+<% if session[:user_id] %>
+<p>vendor id:</p>
+<%= session[:vendor_id] %>
+<% end %>

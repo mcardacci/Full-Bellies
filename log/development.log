@@ -1321,3 +1321,331 @@ Started GET "/sessions/new" for ::1 at 2015-07-16 19:44:11 -0400
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (103.0ms)
 Completed 200 OK in 386ms (Views: 383.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_user" for ::1 at 2015-07-16 20:13:45 -0400
+Processing by SessionsController#user_create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n4ngMysa9wE1/dMrE6ytAVraS7A26ASfbOWYIbCZ69a2xUsbMWIjZOrKUbGSU9V/vbgG1noMTnl0xzyaR2mpgQ==", "user"=>{"username"=>"alex", "password"=>"[FILTERED]"}, "commit"=>"Log In!"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "alex"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 20:13:45 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 316ms (Views: 314.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 20:13:53 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 455ms (Views: 387.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 20:13:53 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 324ms (Views: 321.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Fuser_destroy" for ::1 at 2015-07-16 20:14:11 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/user_destroy"}
+  Rendered sessions/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 361ms (Views: 359.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Fuser_destroy" for ::1 at 2015-07-16 20:14:51 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/user_destroy"}
+  Rendered sessions/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 606ms (Views: 338.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Fuser_destroy" for ::1 at 2015-07-16 20:14:59 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/user_destroy"}
+  Rendered sessions/new.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 329ms (Views: 326.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Fuser_destroy" for ::1 at 2015-07-16 20:15:01 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/user_destroy"}
+  Rendered sessions/new.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 574ms (Views: 570.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 20:15:01 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 20:15:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 20:15:02 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 20:15:02 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 20:15:02 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 20:15:02 -0400
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 20:15:07 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (120.2ms)
+Completed 200 OK in 661ms (Views: 657.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Fuser_destroy" for ::1 at 2015-07-16 20:15:10 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/user_destroy"}
+  Rendered sessions/new.html.erb within layouts/application (192.6ms)
+Completed 200 OK in 686ms (Views: 681.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Fvendor_destroy" for ::1 at 2015-07-16 20:15:14 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/vendor_destroy"}
+  Rendered sessions/new.html.erb within layouts/application (123.7ms)
+Completed 200 OK in 661ms (Views: 657.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 20:16:13 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 838ms (Views: 553.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 20:16:15 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 20:16:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 20:16:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 20:16:15 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 20:16:15 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 20:16:15 -0400
+
+
+Started GET "/sessions/new?method=delete&url=%2Flogout_user" for ::1 at 2015-07-16 20:16:21 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_user"}
+  Rendered sessions/new.html.erb within layouts/application (193.0ms)
+Completed 200 OK in 705ms (Views: 700.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 20:16:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 497ms (Views: 448.1ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 20:16:42 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2015-07-16 20:16:49 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Flogout_vendor" for ::1 at 2015-07-16 20:17:18 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_vendor"}
+  Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 23.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Flogout_vendor" for ::1 at 2015-07-16 20:18:54 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_vendor"}
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 68ms (Views: 34.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 20:18:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 20:18:55 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 20:18:55 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 20:18:55 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 20:18:55 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 20:18:55 -0400
+
+
+Started GET "/sessions/new?method=delete&url=%2Flogout_user" for ::1 at 2015-07-16 20:18:59 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_user"}
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new?method=delete&url=%2Flogout_vendor" for ::1 at 2015-07-16 20:19:00 -0400
+Processing by SessionsController#new as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_vendor"}
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 20:19:09 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=delete&url=%2Flogout_user" for ::1 at 2015-07-16 20:19:11 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_user"}
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 100ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=delete&url=%2Flogout_user" for ::1 at 2015-07-16 20:22:36 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout_user"}
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 20:22:36 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 20:22:36 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 20:22:36 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 20:22:36 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 20:22:36 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 20:22:36 -0400
+
+
+Started GET "/?method=delete&url=%2Flogout" for ::1 at 2015-07-16 20:22:42 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout"}
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?method=delete&url=%2Flogout" for ::1 at 2015-07-16 20:23:53 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout"}
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"sessions"} missing required keys: [:id]):
+     7:   <%= csrf_meta_tags %>
+     8: </head>
+     9: <body>
+    10: <%= link_to 'Logout', session_path, method: 'delete' %>
+    11: 
+    12: <%= yield %>
+    13: 
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1247311820153564193_70144729520800'
+
+
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.1ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.1ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (63.6ms)
+
+
+Started GET "/?method=delete&url=%2Flogout" for ::1 at 2015-07-16 20:24:04 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout"}
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/lowellmower/Desktop/Full-Bellies/app/views/layouts/application.html.erb:10: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+... 'Logout', session_path method: 'delete' );@output_buffer.sa...
+...                               ^):
+  app/views/layouts/application.html.erb:10: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+
+
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (81.9ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.0ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.3ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/lowellmower/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (52.2ms)
+
+
+Started GET "/?method=delete&url=%2Flogout" for ::1 at 2015-07-16 20:25:29 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"method"=>"delete", "url"=>"/logout"}
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-16 20:25:29 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-16 20:25:29 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-16 20:25:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-16 20:25:29 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-16 20:25:29 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-07-16 20:25:29 -0400
+
+
+Started DELETE "/logout" for ::1 at 2015-07-16 20:25:31 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wBVruXikmF1u15OGMPLo9QH03j3L6tzy9SmYNhRxWjzpWcCRYtxMOLHgERyxDZCL5paTW4cOlhTtCzyN44EYaw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-16 20:25:31 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
