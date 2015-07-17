@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav>
-		<% if session[:user_id] || session[:vendor_id] %>
+  <nav>
+    <% if session[:user_id] || session[:vendor_id] %>
 			<%= link_to 'Logout', logout_path, method: 'delete' %>
 			<% if session[:vendor_id] %>
 				<%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %>
@@ -22,6 +22,5 @@
 		<%= link_to 'Deals', deals_path %>
 	</nav>
 <%= yield %>
-
 </body>
 </html>
