@@ -1,8 +1,3 @@
-<% if session[:vendor_id] %>
-	<%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %>
-<% elsif session[:user_id] %>
-	<%= link_to 'Profile Page', user_path(session[:user_id]) %>
-<% end %>
 <h1>Home Page</h1>
 
 <% if session[:user_id] %>
