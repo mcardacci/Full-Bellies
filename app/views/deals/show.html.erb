@@ -1,0 +1,19 @@
+<h1>Grandma's pizza</h1>
+
+<div class="item-description">
+	<p>This is the best pizza in the world</p>
+</div>
+<p>#picture#</p>
+<div class="restaurant-description">
+	<p>Located just outside the slums of bushwick</p>
+</div>
+<form action="" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_qFJYnRoTE5TmYSYkelFbAjNp"
+    data-amount="<%= @price_btn %>"
+    data-name="Demo Site"
+    data-description="1 pizza <%= @price_header %>"
+    data-image="<%= File.expand_path('image.jpg') %>">
+  </script>
+</form>
