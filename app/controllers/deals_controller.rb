@@ -1,7 +1,7 @@
 class DealsController < ApplicationController
 
   def index
-    @deals = Deal.order(:created_at :desc)
+    @deals = Deal.order(created_at: :desc)
   end
 
   def new
@@ -10,6 +10,14 @@ class DealsController < ApplicationController
   end
 
   def create
+    binding.pry
+    @deal = Deal.new(deal_params)
+    if @deal.update_attributes(vendor_id: current_vendor.id) && @deal.save
+      redirect_to current_vendor
+    else
+      redirect_to :back
+      flash[:notice] = "all fields are required."
+    end
 
   end
 
@@ -31,8 +39,11 @@ class DealsController < ApplicationController
   private
 
     def deal_params
-      params.require().permit()
+      params.require(:deal).permit(:title, :description, :item_quantity, :item_price)
     end
 
+    def current_vendor
+      return Vendor.find(session[:vendor_id])
+    end
 
 end
