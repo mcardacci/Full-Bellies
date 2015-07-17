@@ -6,9 +6,9 @@ class ChargesController < ApplicationController
 	end
 
 	def create
-       	  # set hidden field in form and capture the @amount in params
+	# set hidden field in form and capture the @amount in params
 	  @amount = 500
-
+	  
 	  customer = Stripe::Customer.create(
 	    :email => 'example@stripe.com',
 	    :card  => params[:stripeToken]
@@ -22,6 +22,5 @@ class ChargesController < ApplicationController
 	  )
 	  
 	  redirect_to deals_path
-    
   end
 end
