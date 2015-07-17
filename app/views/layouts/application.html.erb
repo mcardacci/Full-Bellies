@@ -12,7 +12,7 @@
 			<%= link_to 'Logout', logout_path, method: 'delete' %>
 			<% if session[:vendor_id] %>
 				<%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %>
-			<% elsif session[:user_id] %>
+			<% else %>
 				<%= link_to 'Profile Page', user_path(session[:user_id]) %>
 			<% end %>
 		<% else %> 
