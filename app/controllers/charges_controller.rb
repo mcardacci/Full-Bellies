@@ -1,6 +1,12 @@
 class ChargesController < ApplicationController
 
+	def index
+		@price_header = "($00.50)"
+		@price_btn = 50
+	end
+
 	def create
+		# set hidden field in form and capture the @amount in params
 	  @amount = 500
 
 	  customer = Stripe::Customer.create(
@@ -16,17 +22,6 @@ class ChargesController < ApplicationController
 	  )
 	  
 	  redirect_to deals_path
-
-	# rescue Stripe::CardError => e
- #    @user.errors.add :base, e.message
- #    @user.stripe_token = nil
- #    render :action => :new
-
- #  rescue Stripe::StripeError => e
- #    logger.error e.message
- #    @user.errors.add :base, "There was a problem with your credit card"
- #    @user.stripe_token = nil
- #    render :action => :new
     
   end
 end
