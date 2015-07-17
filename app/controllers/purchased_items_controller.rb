@@ -9,8 +9,6 @@ class PurchasedItemsController < ApplicationController
     purchased_item = PurchasedItem.create(purchased_item_params)
     purchased_item.update_attributes(price: calculate_price(params[:quantity], deal), user_id: current_user.id)
 
-    binding.pry
-
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
