@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.find_by(username: user_params[:username])
     if user && user.authenticate(user_params[:password])
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to deals_path
     else
       redirect_to new_session_path
     end

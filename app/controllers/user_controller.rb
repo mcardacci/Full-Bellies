@@ -7,9 +7,9 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to user_path(@user.id)
     else
-      flash[:notice] = "Your username exists already"
+      flash[:notice] = "There was a problem with your submission"
       redirect_to new_user_path
     end
   end
