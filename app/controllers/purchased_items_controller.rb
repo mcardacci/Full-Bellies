@@ -3,6 +3,7 @@ class PurchasedItemsController < ApplicationController
   def new
     @deal = Deal.find(params[:deal_id])
     @purchased_item = PurchasedItem.new
+    render layout: false
   end
 
   def create
