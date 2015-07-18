@@ -1,0 +1,9 @@
+<% @vendor.users.each do |follower| %>
+  <div class="follower">
+    <img class="img-circle" src= <%= follower.profile_pic %> width="50", height="50">
+    <div class="user_content">
+      <span class="username"><%= link_to follower.username, user_path(follower) %>
+      </span>
+    </div>
+  </li>
+<% end %>

@@ -82,6 +82,10 @@ class VendorsController < ApplicationController
     return render :json => { :downvote => (@followers.count).to_s}
   end
 
+  def followers
+    @vendor = Vendor.find(params[:id])
+  end
+
   private
 
     def vendor_params
