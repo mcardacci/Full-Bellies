@@ -2,6 +2,7 @@
 <p><%= @deal.description%></p><br/>
 <p>quantity: <%=@deal.item_quantity%></p><br/>
 <p>price per item: <%= @deal.item_price %></p><br/>
+<span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %> </span><br/>
 <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id) %>
 
 
