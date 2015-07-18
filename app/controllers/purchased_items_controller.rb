@@ -7,7 +7,7 @@ class PurchasedItemsController < ApplicationController
   def create
 
     deal = Deal.find(params[:deal_id])
-    if purchase_quantity_less_than_deal_quantity?(params[:quantity], deal)
+    if quantity_comparison?(params[:quantity], deal) && is_current?(deal)
       update_deal_quantity(params[:quantity],deal)
       purchased_item = PurchasedItem.create(purchased_item_params)
       purchased_item.update_attributes(price: calculate_price(params[:quantity], deal), user_id: current_user.id)
@@ -27,7 +27,7 @@ class PurchasedItemsController < ApplicationController
       )
       redirect_to user_path(current_user.id)
     else
-      flash[:notice] = "you can only order up to #{deal.item_quantity} items"
+      flash[:notice] = "There was an error with your purchase. Please check the expiration time and quantity to make sure you're making a valid purchase"
       redirect_to :back
     end
   end
@@ -39,7 +39,7 @@ class PurchasedItemsController < ApplicationController
   end
 
   def calculate_price(quantity, deal)
-    return quantity.to_i * deal.item_price.to_f
+    return (quantity.to_i * deal.item_price.to_f).round(2)
   end
 
   def current_user
@@ -50,12 +50,16 @@ class PurchasedItemsController < ApplicationController
     (calculate_price(quantity, deal) * 100).to_i
   end
 
-  def purchase_quantity_less_than_deal_quantity?(quantity, deal)
+  def quantity_comparison?(quantity, deal)
     quantity.to_i <= deal.item_quantity && quantity.to_i > 0
   end
 
   def update_deal_quantity(quantity, deal)
     deal.update_attributes(item_quantity: (deal.item_quantity - quantity.to_i) )
+  end
+
+  def is_current?(deal)
+    deal.end_time.getlocal > Time.now
   end
 
 

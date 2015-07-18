@@ -2,5 +2,6 @@
   <%= link_to deal.title, deal %>
   <%= link_to deal.vendor.name, deal.vendor %>
   <%= deal.item_price %>
-  <%= deal.item_quantity %>
+  <%= deal.item_quantity %><br/>
+  <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,deal.end_time) %> </span>
 </li>
