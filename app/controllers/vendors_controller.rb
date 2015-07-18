@@ -1,4 +1,9 @@
 class VendorsController < ApplicationController
+
+  def index
+    @vendors = Vendor.order
+  end
+
   def new
     @vendor = Vendor.new
     if request.xhr?
