@@ -1,7 +1,7 @@
 class VendorsController < ApplicationController
 
   def index
-    @vendors = Vendor.order
+    @vendors = Vendor.all.sort_by {|vendor| vendor.deals.count}.reverse
   end
 
   def new
