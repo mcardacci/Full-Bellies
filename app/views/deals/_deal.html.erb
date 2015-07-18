@@ -7,9 +7,10 @@
     <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,deal.end_time) %>
     </span>
   </li>
-  <p><%= deal.vendor.favorite_vendors.count %> Followers </p>
+  <p><span class="follower-count"><%= deal.vendor.favorite_vendors.count %></span> Followers </p>
   <% if session[:user_id] %>
     <%= link_to "Follow Vendor", follow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "follow-button", method: :put %>
+    <%= link_to "Unfollow", unfollow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "unfollow-button", method: :delete %>
   <% end %>
   <hr>
 </ul>
