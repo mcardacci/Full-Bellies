@@ -10,7 +10,7 @@ class DealsController < ApplicationController
 
   def create
     deal = Deal.new(deal_params)
-    deal.update_attributes(vendor_id: current_vendor.id)
+    deal.update_attributes(vendor_id: current_vendor.id, end_time: deal_time)
     if deal.save
       redirect_to current_vendor
     else
@@ -43,6 +43,10 @@ class DealsController < ApplicationController
 
     def deal_params
       params.require(:deal).permit(:title, :description, :item_quantity, :item_price)
+    end
+
+    def deal_time
+      Time.new(params[:deal]["end_time(1i)"].to_i, params[:deal]["end_time(2i)"].to_i, params[:deal]["end_time(3i)"].to_i, params[:deal]["end_time(4i)"].to_i, params[:deal]["end_time(5i)"].to_i)
     end
 
     def current_vendor
