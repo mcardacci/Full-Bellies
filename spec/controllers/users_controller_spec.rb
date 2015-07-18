@@ -25,9 +25,9 @@ describe UserController do
           expect{ post :create, user: attributes_for(:user)}.to change(User, :count).by(1)
         end
 
-        it "redirects to user#show" do
+        it "redirects to deals index" do
           post :create, user: attributes_for(:user)
-          expect(response).to redirect_to user_path(assigns[:user])
+          expect(response).to redirect_to deals_path
         end
 
         it "logs in user and sets session[user_id]" do
