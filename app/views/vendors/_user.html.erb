@@ -1,4 +1,8 @@
-<h1><%= vendor.name %></h1><br/>
-<h4><%= vendor.bio %></h4><br/>
-<h6>address: <%= vendor.address %></h6><br/>
+<h1><%= vendor.name %></h1>
+<h4><%= vendor.bio %></h4>
+<h6>address: <%= vendor.address %></h6>
 <h6>phone: <%= vendor.phone_number %></h6>
+<h4>Current Deals</h4>
+<% current_deals.each do |deal| %>
+  <%=render partial: '/deals/deal', locals: {deal: deal} %>
+<% end %>
