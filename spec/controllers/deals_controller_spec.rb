@@ -65,5 +65,31 @@ describe DealsController do
     end
   end
 
+  describe "GET #edit" do
+    it "should assign the correct deal to @deal" do
+      get :edit, id: @deal
+      expect(assigns(:deal)).to eq @deal
+    end
+
+    it "renders the :edit template" do
+      get :edit, id: @deal
+      expect(response).to render_template :edit
+    end
+  end
+
+  describe "PUT #update" do
+    context "valid attributes" do
+      it "locates the requested @deal" do
+        put :update, id: @deal, deal: attributes_for(:deal)
+        expect(assigns(:deal)).to eq @deal
+      end
+
+      it "changes the deal's attributes" do
+        put :update, id: @deal, deal: attributes_for(:deal)
+        expect(assigns(:deal)).to eq
+      end
+    end
+  end
+
 end
 
