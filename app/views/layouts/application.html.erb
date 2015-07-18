@@ -7,29 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="collapse navbar-collapse">
+  <nav id="nav-top" class="collapse navbar-collapse">
     <a href="/" class="navbar-brand">FullBellies</a>
     <% if session[:user_id] || session[:vendor_id] %>
-      <ul class="nav navbar-nav">
+      <ul id="nav-top" class="nav navbar-nav">
         <li><%= link_to 'Logout', logout_path, method: 'delete' %></li>
       </ul>
       <% if session[:vendor_id] %>
-        <ul class="nav navbar-nav navbar-right">
+        <ul id="nav-top" class="nav navbar-nav navbar-right">
         	<li><%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %></li>
         </ul>
       <% else %>
-        <ul class="nav navbar-nav navbar-right">
+        <ul id="nav-top" class="nav navbar-nav navbar-right">
         	<li><%= link_to 'Profile Page', user_path(session[:user_id]) %></li>
         </ul>
       <% end %>
     <% else %>
-      <ul class="nav navbar-nav">
+      <ul id="nav-top" class="nav navbar-nav">
         <li><%= link_to 'Login', login_path %><span class="vendor-nav"></li>
         <li><%= link_to 'Are you a business?', login_path %></span><li>
         <li><%= link_to 'Signup', new_user_path %><li>
       </ul>
     <% end %>
-    <ul class="nav navbar-nav">
+    <ul id="nav-top" class="nav navbar-nav">
       <li><%= link_to 'Deals', deals_path %></li>
       <li><%= link_to 'Mission', about_path %></li>
     </ul>

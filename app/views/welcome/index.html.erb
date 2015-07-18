@@ -1,19 +1,74 @@
 <div id="banner" class="container">
-  <h1 id="title">Full Bellies</h1>
+  <h1 id="banner-title">Full - Bellies</h1>
   <p class="lead">
     The most conveient way to connect local businesses with hungry people. Sign up, save, eat.
   </p>
   <div class="container">
-    <button class="btn btn-success">I'm a Vendor</button>
-    <button class="btn btn-success">I'm Hungary</button>
+    <button class="btn btn-warning">I'm a Vendor</button>
+    <button class="btn btn-primary">I'm Hungary</button>
   </div>
 </div>
 
-<% if session[:user_id] %>
-<p>user id:</p>
-<%= session[:user_id] %>
-<% end %>
-<% if session[:vendor_id] %>
-<p>vendor id:</p>
-<%= session[:vendor_id] %>
-<% end %>
+<br><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <p id="marketing-glyph" class="glyphicon glyphicon-grain"></p>
+      <p>Feeding People</p>
+    </div>
+    <div class="col-sm-4">
+      <p id="marketing-glyph" class="glyphicon glyphicon-leaf"></p>
+      <p>Firing People</p>
+    </div>
+    <div class="col-sm-4">
+      <p id="marketing-glyph" class="glyphicon glyphicon-comment"></p>
+      <p>Connecting People</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 col-md-push-5">
+      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5 col-md-pull-7">
+      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <div class="col-md-5">
+      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <footer>
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2015 Full-Bellies, Inc. &middot; <a href="#">Terms</a> &middot; <a href="#">Contact</a></p>
+  </footer>
+
+</div>
