@@ -1,0 +1,32 @@
+#banner{
+  background-image: url('banner.png');
+  background-size: contain;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  padding-bottom: 80px;
+  padding-top: 30px
+}
+
+#banner-title{
+  color: #E5E4D7;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-family: 'Pacifico', cursive;
+  font-size: 100px;
+}
+
+#nav-top a {
+  color: inherit;
+}
+
+#marketing-glyph {
+  text-align: center;
+  font-size: 100px;
+}
+
+/*neon green 92CD00*/
+/*grey E5E4D7*/
+/*tan FFCF79*/
+/*dark green 2C6700*/

@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'stripe'
-
+gem 'bootstrap-sass'
 gem 'twilio-ruby'
 gem 'sendgrid'
 # Use Unicorn as the app server
