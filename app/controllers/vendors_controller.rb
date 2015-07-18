@@ -19,6 +19,7 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id])
+    @current_deals = @vendor.deals.where("end_time > ? AND item_quantity > ?", Time.now, 0).order(created_at: :desc)
   end
 
   def edit

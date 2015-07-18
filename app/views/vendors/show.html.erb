@@ -1,7 +1,6 @@
-<h1>SHOW VENDOR PROFILE HERE</h1>
-<% if vendor_logged_in? %>
+<% if current_vendors_page?(@vendor) %>
   <%=render partial: '/vendors/vendor', locals: {vendor: @vendor} %>
 <% else %>
-  <%=render partial: '/vendors/user', locals: {vendor: @vendor} %>
+  <%=render partial: '/vendors/user', locals: {vendor: @vendor, current_deals: @current_deals} %>
 <% end %>
 
