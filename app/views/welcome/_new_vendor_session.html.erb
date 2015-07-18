@@ -1,0 +1,9 @@
+<div class="container">
+  <%= form_for @vendor, url: '/login_vendor' do |f|%>
+    <%= f.label :username, 'Username:' %><br>
+    <%= f.text_field :username %><br><br>
+    <%= f.label :password, 'Password:' %><br>
+    <%= f.password_field :password %><br><br>
+    <%= f.submit 'Log In!', class: 'btn btn-warning' %>
+  <% end %>
+</div>
