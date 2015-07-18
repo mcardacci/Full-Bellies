@@ -56,6 +56,31 @@ class VendorsController < ApplicationController
     redirect_to @vendor
   end
 
+  def follow
+    @vendor = Vendor.find(params[:vendor_id])
+    @followers = @vendor.favorite_vendors
+    unless @followers.exists?(user_id: params[:id])
+      @vendor.favorite_vendors.create(user_id: params[:id])
+      if request.xhr?
+        return render :json => { :upvote => (@followers.count).to_s}
+      end
+    end
+    return render :json => { :upvote => (@followers.count).to_s}
+  end
+
+  def unfollow
+    @vendor = Vendor.find(params[:vendor_id])
+    @followers = @vendor.favorite_vendors
+    if @followers.exists?(user_id: params[:id])
+      vote = @vendor.favorite_vendors.find_by(user_id: params[:id])
+      vote.destroy
+      if request.xhr?
+        return render :json => { :upvote => (@followers.count).to_s}
+      end
+    end
+    return render :json => { :upvote => (@followers.count).to_s}
+  end
+
   private
 
     def vendor_params
