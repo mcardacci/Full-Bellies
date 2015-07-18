@@ -39,7 +39,7 @@ class PurchasedItemsController < ApplicationController
   end
 
   def calculate_price(quantity, deal)
-    return quantity.to_i * deal.item_price.to_f
+    return (quantity.to_i * deal.item_price.to_f).round(2)
   end
 
   def current_user
@@ -59,7 +59,6 @@ class PurchasedItemsController < ApplicationController
   end
 
   def is_current?(deal)
-    binding.pry
     deal.end_time.getlocal > Time.now
   end
 
