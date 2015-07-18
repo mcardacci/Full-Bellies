@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2">
+      <%= form_for @vendor do |f|%>
+        <%= f.label :username, 'Username:' %><br>
+        <%= f.text_field :username %><br><br>
+        <%= f.label :email, 'Email:' %><br>
+        <%= f.text_field :email %><br><br>
+        <%= f.label :name, 'Business Name:' %><br>
+        <%= f.text_field :name %><br><br>
+        <%= f.label :password, 'Password:' %><br>
+        <%= f.password_field :password %><br><br>
+        <%= f.label :address, 'Address:' %><br>
+        <%= f.text_field :address %><br><br>
+        <%= f.submit 'Sign Up!', class: 'btn btn-warning' %>
+      <% end %>
+    </div>
+    <div id="signup-info" class="col-sm-5">
+      <h3>What You Get:</h3>
+      <p>adfkaf nadwfi waekn fjkawe fkweF NWe f weFJ OEJf we,FJNWDJF ,wef weNFONWKEL f,wem,FOJ WEF M, welf n,ew F JNeoj f,w em, FJ WE,f weJF Lejfjlwe</p>
+      <h3>What We Get:</h3>
+      <p>anewfjn,a wef jakwe fm wem,FAWE F,WEm,f,m wv k sdmn,g jkse g ,a jvnae gm,ioragl ,a amw,v,m jaor va f owjae m,c awm,  nwav caw jkv cnw ajv </p>
+    </div>
+  </div>
+</div>
