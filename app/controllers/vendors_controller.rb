@@ -76,10 +76,10 @@ class VendorsController < ApplicationController
       vote = @vendor.favorite_vendors.find_by(user_id: params[:id])
       vote.destroy
       if request.xhr?
-        return render :json => { :upvote => (@followers.count).to_s}
+        return render :json => { :downvote => (@followers.count).to_s}
       end
     end
-    return render :json => { :upvote => (@followers.count).to_s}
+    return render :json => { :downvote => (@followers.count).to_s}
   end
 
   private
