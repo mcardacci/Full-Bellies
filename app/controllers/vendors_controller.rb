@@ -56,6 +56,18 @@ class VendorsController < ApplicationController
     redirect_to @vendor
   end
 
+  def follow
+    @vendor = Vendor.find(params[:vendor_id])
+    @followers = @vendor.favorite_vendors
+    unless @followers.exists?(user_id: params[:id])
+      @vendor.favorite_vendors.create(user_id: params[:id])
+      redirect_to :back
+      return
+    end
+    flash[:notice] = "somethings wrong"
+    redirect_to :back
+  end
+
   private
 
     def vendor_params
