@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   get '/vendors/:id/text' => 'vendors#send_sms', as: 'text'
   get '/vendors/:id/email' => 'vendors#email_followers', as: 'email'
+  put '/vendors/:id/follow' => 'vendors#follow', as: 'follow'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
