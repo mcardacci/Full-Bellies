@@ -7,8 +7,6 @@
   <% @vendor.deals.each do |deal| %>
     <h4><%= link_to deal.title, deal_path(deal) %></h4>
   <% end %>
-<h3>Followers</h3>
-  <% @vendor.users.each do |follower| %>
-    <p><%= link_to follower.username, user_path(follower)%></p>
-  <% end %>
+<h3><%= link_to @vendor.users.count, followers_path %></h3>
+
 
