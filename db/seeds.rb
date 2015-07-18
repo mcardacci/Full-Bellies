@@ -103,7 +103,7 @@ vendor1.deals.create(
   description: "These pizzas are good and about to be trashed.  Come grab one at 90% discount",
   item_quantity: 10,
   item_price: 1.00,
-  end_time: Time.local(2016.to_i, 1.to_i, 1.to_i, 00.to_i, 00.to_i),
+  end_time: Time.local(2015.to_i, 7.to_i, 16.to_i, 00.to_i, 00.to_i),
   )
 
 vendor1.deals.create(
