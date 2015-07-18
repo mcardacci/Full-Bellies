@@ -27,7 +27,7 @@ class PurchasedItemsController < ApplicationController
       )
       redirect_to user_path(current_user.id)
     else
-      flash[:notice] = "there was an error with your purchaseyou can only order up to #{deal.item_quantity} items"
+      flash[:notice] = "There was an error with your purchase. Please check the exiration time and quantity to make sure you're making a valid purchase"
       redirect_to :back
     end
   end
