@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get '/about' => 'welcome#about', as: 'about'
-  get '/vendors/followers' => 'vendors#followers', as: 'followers'
+  get '/vendors/:id/followers' => 'vendors#followers', as: 'followers'
   resources :sessions, only: [:new]
 
   get '/login' => 'sessions#new'
