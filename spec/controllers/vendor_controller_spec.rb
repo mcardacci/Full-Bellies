@@ -99,6 +99,7 @@ require 'rails_helper'
 				end
 			end
 
+
 			context "invalid attrs" do 
 				it "locates the requested @vendor" do
 					put :update, id: @vendor, vendor: attributes_for(:invalid_vendor)
