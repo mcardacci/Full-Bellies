@@ -8,7 +8,7 @@
   <%= f.label :item_price %><br/>
   <%= f.number_field :item_price, size: 6, step: 0.01 %><br/>
   <%= f.label :end_time %><br/>
-  <%= f.date_select :end_time %><br/>
-  <%= f.time_select :end_time, ignore_date: true %><br/>
+  <span>date: <%= f.date_select :end_time %></span><br/>
+  <span>time:<%= f.time_select :end_time, ignore_date: true %></span><br/>
   <%= f.submit %>
 <% end %>
