@@ -29,7 +29,8 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find(params[:id])
     @vendor.assign_attributes(vendor_params)
     if @vendor.save
-      redirect_to root_path, flash[:notice] = "Successfully edited account"
+      flash[:notice] = "Successfully edited account"
+      redirect_to vendor_path(@vendor)
     else
       render :edit
     end
@@ -58,7 +59,7 @@ class VendorsController < ApplicationController
   private
 
     def vendor_params
-      params.require(:vendor).permit(:username, :password, :email, :name, :address, :phone_number)
+      params.require(:vendor).permit(:username, :password, :email, :name, :address, :phone_numbe)
     end
 
 end
