@@ -3,6 +3,8 @@ require 'rails_helper'
 describe DealsController do
   before(:each) do
     @deal = create(:deal)
+    @vendor = create(:vendor)
+    session[:vendor_id] = @vendor.id
   end
 
   describe 'GET #index' do
@@ -38,8 +40,6 @@ describe DealsController do
 
   describe "POST #create" do
     before(:each) do
-      @vendor = create(:vendor)
-      session[:vendor_id] = @vendor.id
       # @end_time = Time.local(2016.to_i, 1.to_i, 1.to_i, 00.to_i, 00.to_i)
       # @end_time = {"deal" => {"end_time(1i)"=>"2016", "end_time(2i)"=>"7", "end_time(3i)"=>"18", "end_time(4i)"=>"18", "end_time(5i)"=>"05"}}
     end
@@ -92,6 +92,29 @@ describe DealsController do
         expect(@deal.item_price).to eq 2.00
         expect(@deal.item_quantity).to eq 10
       end
+    end
+  end
+
+  describe "get SHOW" do
+    it "renders the show template" do
+      get :show, id: @deal
+      expect(response).to render_template :show
+    end
+
+    it "assigns the requested deal to @deal" do
+      get :show, id: @deal
+      expect(assigns(:deal)).to eq @deal
+    end
+  end
+
+  describe "Delete #destroy" do
+    it "deletes the deal" do
+      expect {delete :destroy, id: @deal}.to change(Deal, :count).by(-1)
+    end
+
+    it "redirects to current vendor" do
+      delete :destroy, id: @deal
+      expect(response).to redirect_to vendor_path(@vendor)
     end
   end
 
