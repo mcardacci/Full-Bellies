@@ -1,7 +1,16 @@
-<li>
-  <%= link_to deal.title, deal %>
-  <%= link_to deal.vendor.name, deal.vendor %>
-  <%= deal.item_price %>
-  <%= deal.item_quantity %><br/>
-  <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,deal.end_time) %> </span>
-</li>
+<ul>
+  <li>
+    <%= link_to deal.title, deal %>
+    <%= link_to deal.vendor.name, deal.vendor %>
+    <%= deal.item_price %>
+    <%= deal.item_quantity %><br/>
+    <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,deal.end_time) %>
+    </span>
+  </li>
+  <p><%= deal.vendor.favorite_vendors.count %> Followers </p>
+  <% if session[:user_id] %>
+    <%= link_to "Follow Vendor", follow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "follow-button", method: :put %>
+  <% end %>
+  <hr>
+</ul>
+
