@@ -58,7 +58,7 @@ class VendorsController < ApplicationController
   private
 
     def vendor_params
-      params.require(:vendor).permit(:username, :password, :email, :name, :address)
+      params.require(:vendor).permit(:username, :password, :email, :name, :address, :phone_number)
     end
 
 end
