@@ -1,5 +1,2 @@
 <h2>Followers of <%= @vendor.name %></h2>
-
-<% @followers.each do |follower| %>
-  <%= follower.username %>
-<% end %>
+<%= render partial: '/vendors/followers', locals: {followers: @vendor.users} %>

@@ -1,0 +1,5 @@
+<% @vendor.users.each do |follower| %>
+  <%= link_to follower.username, user_path(follower) %>
+<% end %>
+
+

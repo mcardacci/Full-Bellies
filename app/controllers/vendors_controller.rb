@@ -84,7 +84,6 @@ class VendorsController < ApplicationController
 
   def followers
     @vendor = Vendor.find(params[:id])
-    @followers = @vendor.users
   end
 
   private
