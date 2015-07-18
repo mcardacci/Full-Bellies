@@ -1,4 +1,5 @@
 class DealsController < ApplicationController
+  before_action :require_vendor_login, except: [:index, :show]
 
   def index
     @deals = Deal.where("end_time > ? AND item_quantity > ?", Time.now, 0).order(created_at: :desc)
