@@ -1,4 +1,5 @@
 class PurchasedItemsController < ApplicationController
+  before_action :require_user_login
   def new
     @deal = Deal.find(params[:deal_id])
     @purchased_item = PurchasedItem.new
@@ -34,33 +35,31 @@ class PurchasedItemsController < ApplicationController
 
   private
 
-  def purchased_item_params
-    params.permit(:deal_id, :title,:description,:quantity)
-  end
+    def purchased_item_params
+      params.permit(:deal_id, :title,:description,:quantity)
+    end
 
-  def calculate_price(quantity, deal)
-    return (quantity.to_i * deal.item_price.to_f).round(2)
-  end
+    def calculate_price(quantity, deal)
+      return (quantity.to_i * deal.item_price.to_f).round(2)
+    end
 
-  def current_user
-    return User.find(session[:user_id]) if !!session[:user_id]
-  end
+    def current_user
+      return User.find(session[:user_id]) if !!session[:user_id]
+    end
 
-  def calculate_stripe_amount(quantity, deal)
-    (calculate_price(quantity, deal) * 100).to_i
-  end
+    def calculate_stripe_amount(quantity, deal)
+      (calculate_price(quantity, deal) * 100).to_i
+    end
 
-  def quantity_comparison?(quantity, deal)
-    quantity.to_i <= deal.item_quantity && quantity.to_i > 0
-  end
+    def quantity_comparison?(quantity, deal)
+      quantity.to_i <= deal.item_quantity && quantity.to_i > 0
+    end
 
-  def update_deal_quantity(quantity, deal)
-    deal.update_attributes(item_quantity: (deal.item_quantity - quantity.to_i) )
-  end
+    def update_deal_quantity(quantity, deal)
+      deal.update_attributes(item_quantity: (deal.item_quantity - quantity.to_i) )
+    end
 
-  def is_current?(deal)
-    deal.end_time.getlocal > Time.now
-  end
-
-
+    def is_current?(deal)
+      deal.end_time.getlocal > Time.now
+    end
 end
