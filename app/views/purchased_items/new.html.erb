@@ -1,7 +1,8 @@
 <h2><%= @deal.title %></h2> <br/>
 <p><%= @deal.description%></p><br/>
 <p>quantity: <%=@deal.item_quantity%></p><br/>
-<p>price per item: <span id='dealprice'><%= @deal.item_price %></span></p><br/>
+<p>price per item: <span id='dealprice'><%= @deal.item_price %></span></p>
+<span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %> </span><br/>
 <%= form_tag(controller: "purchased_items", action: "create") do %>
   <%= hidden_field_tag :deal_id,  @deal.id %><br/>
   <%= hidden_field_tag :title, @deal.title %><br/>
