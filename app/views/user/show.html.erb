@@ -1,7 +1,37 @@
 <div class="container">
-  <h1 id="welcome-user">Hello!</h1>
-  <% if session[:user_id] == @user.id %>
-    <%= link_to image_tag('profile.png'), class: 'img-circle' %>
-  	<%= link_to 'Edit Profile', edit_user_path(@user.id) %>
-  <% end %>
+  <div class="row">
+
+    <div class="col-md-4">
+      <h1 id="welcome-user">Hello!</h1>
+    </div>
+
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4 text-center">
+      <% if session[:user_id] == @user.id %>
+        <%= link_to image_tag('profile.png', size: '150x150'), id: 'profile' %>
+      <% end %><br>
+      <hr>
+      <h3>Username: <%= @user.username %></h3>
+      <h4>Phone: <%= @user.phone_number %></h4>
+      <h4>Email: <%= @user.email %></h4>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <% if session[:user_id] == @user.id %>
+          <% @user.purchased_items.each do |item| %>
+            <span> <h4><%= item.title %>, cost: $<%= item.price %><h4></span>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+
+  </div>
 </div>
