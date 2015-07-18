@@ -6,7 +6,6 @@ require 'rails_helper'
 				@vendor = create(:vendor)
 				session[:vendor_id] = @vendor.id
 			end
-
 			describe '#new' do
 				it "assigns a new vendor to @vendor" do
 					get :new
