@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
 
-  default from: 'lowell.mower@gmail.com'
+  default from: 'fullbellies@example.com'
 
   def email_followers(user_emails)
     @url  = 'https://afternoon-meadow-3523.herokuapp.com/'
