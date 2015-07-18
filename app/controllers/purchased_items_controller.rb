@@ -9,7 +9,6 @@ class PurchasedItemsController < ApplicationController
     deal = Deal.find(params[:deal_id])
     if purchase_quantity_less_than_deal_quantity?(params[:quantity], deal)
       update_deal_quantity(params[:quantity],deal)
-      binding.pry
       purchased_item = PurchasedItem.create(purchased_item_params)
       purchased_item.update_attributes(price: calculate_price(params[:quantity], deal), user_id: current_user.id)
 
