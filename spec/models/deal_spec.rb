@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 describe Deal do
+
+  it { should validate_presence_of(:title) }
+  it { should validate_presence_of(:description) }
+  it { should validate_presence_of(:item_quantity) }
+  it { should validate_presence_of(:item_price) }
+  it { should have_many(:purchased_items) }
+  it { should belong_to(:vendor) }
+  it { should have_many(:users) }
+
   it "should be valid with a title, description, and item quantity" do
     expect(build(:deal)).to be_valid
   end
