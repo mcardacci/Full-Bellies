@@ -2,6 +2,14 @@ require 'rails_helper'
 
 describe Vendor do
 
+  it { should have_many(:favorite_vendors) }
+  it { should have_many(:users) }
+  it { should have_many(:deals) }
+  it { should validate_presence_of(:username) }
+  it { should validate_presence_of(:email) }
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:address) }
+
   it "has a valid factory" do
     expect(build(:vendor)).to be_valid
   end
