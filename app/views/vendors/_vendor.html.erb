@@ -8,5 +8,5 @@
     <h4><%= link_to deal.title, deal_path(deal) %></h4>
   <% end %>
 <h3><%= link_to "#{@vendor.username}'s Followers", followers_path %></h3>
-<%= render partial: '/vendors/followers', locals: {followers: @vendor.users} %>
+<iframe src="/vendors/<%= @vendor.id %>/followers"></iframe>
 
