@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     vendor = Vendor.find_by(username: vendor_params[:username])
     if vendor && vendor.authenticate(vendor_params[:password])
       session[:vendor_id] = vendor.id
-      redirect_to root_path
+      redirect_to vendor_path(vendor.id)
     else
       redirect_to new_session_path
     end

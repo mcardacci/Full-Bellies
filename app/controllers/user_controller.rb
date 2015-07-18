@@ -7,7 +7,7 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path(@user.id)
+      redirect_to deals_path
     else
       flash[:notice] = "There was a problem with your submission"
       redirect_to new_user_path
