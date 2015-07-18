@@ -53,6 +53,9 @@ describe SessionsController do
       expect(session[:vendor_id]).to eq nil
     end
 
-    it "should redirect to "
+    it "should redirect to root path if incorrect" do
+      delete :destroy, id: @registered_vendor.id
+      expect(response).to redirect_to root_path
+    end
   end
 end
