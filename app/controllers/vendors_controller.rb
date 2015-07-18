@@ -48,11 +48,12 @@ class VendorsController < ApplicationController
     redirect_to vendor_path(@vendor.id)
   end
 
-  def send_email
+  def email_followers
     @vendor = Vendor.find(params[:id])
+    @users = @vendor.users
     # get following users
     # pass as a hash to user mailer
-    UserMailer.welcome_email(@user).deliver
+    UserMailer.email_followers(@users.pluck(:email)).deliver
     redirect_to @vendor
   end
 
