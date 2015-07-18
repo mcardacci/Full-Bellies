@@ -14,6 +14,8 @@ var follow = function(event) {
     dataType : 'json'
   }).done(function(response) {
     $('.follower-count').html(response.upvote);
+    $('.follow-button').hide();
+    $('.unfollow-button').show();
   }).fail(function(error) {
     console.log("messed up");
   })
@@ -30,6 +32,8 @@ var unfollow = function(event) {
     dataType : 'json'
   }).done(function(response) {
     $('.follower-count').html(response.upvote);
+    $('.unfollow-button').hide();
+    $('.follow-button').show();
   }).fail(function(error) {
     console.log("messed up");
   })
