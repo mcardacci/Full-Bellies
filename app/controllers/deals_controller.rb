@@ -9,10 +9,8 @@ class DealsController < ApplicationController
   end
 
   def create
-
     deal = Deal.new(deal_params)
     deal.update_attributes(vendor_id: current_vendor.id, end_time: deal_time)
-    binding.pry
     if deal.save
       redirect_to current_vendor
     else
