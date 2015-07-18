@@ -128,7 +128,6 @@ require 'rails_helper'
 	    it "deletes the vendor" do
 	      expect{delete :destroy, id: @vendor}.to change(Vendor, :count).by(-1)
 	    end
-
 	    it "redirects to root path" do
 	      delete :destroy, id: @vendor
 	      expect(response).to redirect_to root_path
