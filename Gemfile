@@ -27,7 +27,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'stripe'
 
 gem 'twilio-ruby'
-
+gem 'sendgrid'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
