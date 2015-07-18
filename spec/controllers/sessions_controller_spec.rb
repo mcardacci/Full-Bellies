@@ -41,13 +41,18 @@ describe SessionsController do
       expect(response).to redirect_to new_session_path
     end
   end
+
+  describe "DELETE sessions#destroy" do
+    it "should set the session user_id to nil" do
+      delete :destroy, id: @registered_user.id
+      expect(session[:user_id]).to eq nil
+    end
+
+    it "should set the session vendor_id to nil" do
+      delete :destroy, id: @registered_vendor.id
+      expect(session[:vendor_id]).to eq nil
+    end
+
+    it "should redirect to "
+  end
 end
-
-
-# before(:each) do
-#     @native_language =  FactoryGirl.create(:language, name: "English")
-#     @study_language =  FactoryGirl.create(:language, name: "Spanish")
-#     @country =  FactoryGirl.create(:country)
-#     @level =  FactoryGirl.create(:level, language_id: @native_language.id)
-#     @registered_user =  FactoryGirl.create(:user, native_language_id: @native_language.id, study_language_id: @study_language.id, country_id: @country.id, level_id: @level.id)
-#   end
