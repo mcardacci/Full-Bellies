@@ -10,4 +10,8 @@ module ApplicationHelper
   def current_vendors_deal?(deal)
     current_vendor == deal.vendor
   end
+
+  def current_vendors_page?(vendor)
+    current_vendor == vendor
+  end
 end
