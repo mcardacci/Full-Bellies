@@ -22,9 +22,9 @@ class PurchasedItemsController < ApplicationController
       )
 
       charge = Stripe::Charge.create(
-        :customer    => current_vendor.stripe_user_id,
+        :customer    => customer.id,
         :amount      => calculate_stripe_amount(params[:quantity], deal),
-        :description => current_vendor.name,
+        :description => deal.vendor.name,
         :currency    => 'usd'
       )
       flash[:success] = "Your purchase was completed successfully!"
