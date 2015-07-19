@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Mangage Deals & Followers:</h3>
+  </div>
+  <div class="panel-body">
+    <h5>Use the operations below to interact with users and post new deals. We give you the choice to manually text and email your users that deals are available but ask that you do so with restraint.</h5>
+  </div>
+  <table class="table">
+    <tr>
+      <td><h4>Create a New Deal:</h4></td>
+      <td><%= link_to 'New Deal', new_deal_path, class: 'btn btn-primary' %></td>
+    </tr>
+    <tr>
+      <td><h4>Send Followers a Text:</h4></td>
+      <td><%= link_to 'Send Text', text_path, class: 'btn btn-warning' %></td>
+    </tr>
+    <tr>
+      <td><h4>Send Followers an Email:</h4></td>
+      <td><%= link_to 'Send Mail', email_path, class: 'btn btn-warning' %></td>
+    </tr>
+    <tr>
+      <td><h4>See Your Followers:</h4></td>
+      <td><%= link_to "Followers", followers_path, class: 'btn btn-warning' %></td>
+    </tr>
+  </table>
+</div>
