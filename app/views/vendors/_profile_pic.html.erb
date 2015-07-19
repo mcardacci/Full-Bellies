@@ -2,5 +2,7 @@
   <%= image_tag vendor.avatar.url(:medium), class: 'img-rounded' %>
 <% else %>
   <%= link_to image_tag('profile.png', size: '150x150'), "#pic-upload", :data => { :toggle =>"modal" } %>
-  <%= render partial: 'vendor/update_profile_pic' %>
+  <% if current_vendor %>
+    <%= render partial: 'vendors/update_profile_pic' %>
+  <% end %>
 <% end %>

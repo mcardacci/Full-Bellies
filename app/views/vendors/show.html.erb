@@ -15,7 +15,8 @@
     </div>
 
     <div class="col-md-4 text-center">
-      <%= link_to image_tag('profile.png', size: '150x150'), id: 'profile' %><br>
+      <%= render partial: 'vendors/profile_pic', locals: {vendor: @vendor} %>
+
       <hr>
       <h3>Username: <%= @vendor.name %></h3>
       <h4>Phone: <%= @vendor.phone_number %></h4>
