@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <%= form_for @user, class: 'text-center', method: "put", :html => { :multipart => true } do |form| %>
-          <%= form.file_field :avatar %>
+          <%= form.file_field :avatar, :default_url => '/assets/images/profile.png' %>
           <%= form.submit class: 'btn btn-primary' %>
         <% end %>
       </div>
