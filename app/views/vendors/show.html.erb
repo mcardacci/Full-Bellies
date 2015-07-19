@@ -21,7 +21,7 @@
       <h3>Username: <%= @vendor.name %></h3>
       <h4>Phone: <%= @vendor.phone_number %></h4>
       <h4>Email: <%= @vendor.email %></h4>
-      <h4>Following: <span class="badge"><%= @vendor.favorite_vendors.count %></span></h4>
+      <h4>Followers: <span class="badge"><%= @vendor.favorite_vendors.count %></span></h4>
       <% if current_vendor %>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vendorEdit">Edit Profile</button>
         <%= render partial: 'vendors/edit_vendor' %>
