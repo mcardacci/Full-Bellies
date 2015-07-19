@@ -2,6 +2,8 @@
   <%= image_tag user.avatar.url(:medium), class: 'img-rounded' %>
 <% else %>
   <%= link_to image_tag('profile.png', size: '150x150'), "#pic-upload", :data => { :toggle =>"modal" } %>
-  <%= render partial: 'user/update_profile_pic' %>
+  <% if current_user %>
+    <%= render partial: 'user/update_profile_pic' %>
+  <% end %>
 <% end %>
 
