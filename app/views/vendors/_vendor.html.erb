@@ -1,19 +1,49 @@
-
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
       <ul><h3>Last 5 Deals:</h3></ul>
       <% @last_five.each do |deal| %>
         <ul>
           <h3><%= link_to deal.title, deal_path(deal.id) %></h3>
         </ul>
       <% end %>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Mangage Deals:</h3>
+        </div>
+        <div class="panel-body">
+          <p>Use the operations below to interact with users</p>
+        </div>
+        <table class="table">
+          <tr>
+            <td><h4>Create a New Deal:</h4></td>
+            <td><%= link_to 'New Deal', new_deal_path, class: 'btn btn-warning' %></td>
+          </tr>
+          <tr>
+            <td><h4>Send Followers a Text:</h4></td>
+            <td><%= link_to 'Send Text', text_path, class: 'btn btn-warning' %></td>
+          </tr>
+          <tr>
+            <td><h4>Send Followers an Email:</h4></td>
+            <td><%= link_to 'Send Mail', email_path, class: 'btn btn-warning' %></td>
+          </tr>
+          <tr>
+            <td><h4>See Your Followers:</h4></td>
+            <td><%= link_to "Followers", followers_path, class: 'btn btn-warning' %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-2">
 
-<h3>Send out your Deal</h3>
-<%= link_to 'Send Text', text_path %>
-<%= link_to 'Send Email', email_path %>
-<%= link_to 'New Deal', new_deal_path %>
-<h3>Active Deals:</h3>
+    </div>
+  </div>
+</div>
 
 
-<h3><%= link_to "#{@vendor.username}'s Followers", followers_path %></h3>
-<iframe src="/vendors/<%= @vendor.id %>/followers"></iframe>
 
+
+      <h3>Your Followers:</h3>
+      <iframe src="/vendors/<%= @vendor.id %>/followers"></iframe>
