@@ -16,6 +16,7 @@
       <h4>Phone: <%= @user.phone_number %></h4>
       <h4>Email: <%= @user.email %></h4>
       <h4>Following: <span class="badge"><%= @user.favorites.count %></span></h4>
+      <%= image_tag @user.avatar.url(:medium) %>
     </div>
   </div>
 
