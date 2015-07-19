@@ -1,0 +1,18 @@
+<%= form_for @vendor, method: "put" do |f| %>
+  <%= f.label :username, 'Username:' %><br>
+  <%= f.text_field :username %><br><br>
+  <%= f.label :email, 'Email:' %><br>
+  <%= f.text_field :email %><br><br>
+  <%= f.label :name, 'Business Name:' %><br>
+  <%= f.text_field :name %><br><br>
+  <%= f.label :address, 'Address:' %><br>
+  <%= f.text_field :address %><br><br>
+  <%= f.label :phone_number, 'Phone Number:' %><br/>
+  <%= f.text_field :phone_number %><br/><br/>
+  <%= f.label :bio, 'Company Bio' %><br/>
+  <%= f.text_area :bio, cols:50, rows: 10 %><br/>
+  <%= f.label :avatar, 'Profile Picture' %>
+  <%= f.file_field :avatar %><br><br>
+  <%= f.submit 'Submit', class: 'btn btn-warning' %>
+<% end %>
+<%= link_to 'destroy vendor', vendor_path, method: 'delete' %>
