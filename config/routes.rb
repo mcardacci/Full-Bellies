@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get '/vendors/:id/email' => 'vendors#email_followers', as: 'email'
   put '/vendors/:id/follow' => 'vendors#follow', as: 'follow'
   delete '/vendors/:id/unfollow' => 'vendors#unfollow', as: 'unfollow'
+  get '/vendor_session/new' => 'sessions#new_vendor_session', as: 'new_vendor_session'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
