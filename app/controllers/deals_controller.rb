@@ -10,9 +10,12 @@ class DealsController < ApplicationController
   end
 
   def create
-    deal = Deal.new(deal_params)
-    deal.update_attributes(vendor_id: current_vendor.id, end_time: deal_time)
-    if deal.save
+    @deal = Deal.new(deal_params)
+    @deal.update_attributes(vendor_id: current_vendor.id, end_time: deal_time)
+    @vendor = current_vendor
+    if @deal.save
+      # @vendor.send_followers_sms(@deal)
+      # UserMailer.email_followers(@deal).deliver
       redirect_to current_vendor
     else
       flash[:notice] = "all fields are required."
