@@ -83,6 +83,7 @@ class VendorsController < ApplicationController
     return render :json => { :downvote => (@followers.count).to_s}
   end
 
+  # this is for index of Vendors followers
   def followers
     @vendor = Vendor.find(params[:id])
   end
