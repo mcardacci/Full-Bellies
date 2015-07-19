@@ -17,14 +17,14 @@ class PurchasedItemsController < ApplicationController
 
 
       customer = Stripe::Customer.create(
-        :email => 'example@stripe.com',
+        :email => current_user.email,
         :card  => params[:stripeToken]
       )
 
       charge = Stripe::Charge.create(
-        :customer    => customer.id,
+        :customer    => current_vendor.stripe_user_id,
         :amount      => calculate_stripe_amount(params[:quantity], deal),
-        :description => 'Rails Stripe customer',
+        :description => current_vendor.name,
         :currency    => 'usd'
       )
       flash[:success] = "Your purchase was completed successfully!"
