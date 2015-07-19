@@ -94,6 +94,16 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find(params[:id])
   end
 
+  def stripe_acct
+    response = Vendor.post_back(params[:code])
+    response_hash = JSON.parse(response.body)
+    binding.pry
+    # current_vendor.update_attributes(access_token: response_hash["access_token"], livemode: response_hash["livemode"], refresh_token: response_hash["refresh_token"], token_type: response_hash["token_type"], stripe_publishable_key: response_hash["stripe_publishable_key"], stripe_user_id: response_hash["stripe_user_id"], scope: response_hash["scope"] )
+    binding.pry
+
+  end
+
+
   private
 
     def vendor_params
