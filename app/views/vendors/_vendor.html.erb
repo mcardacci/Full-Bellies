@@ -1,12 +1,19 @@
-<h1>vendor partial</h1>
+
+
+      <ul><h3>Last 5 Deals:</h3></ul>
+      <% @last_five.each do |deal| %>
+        <ul>
+          <h3><%= link_to deal.title, deal_path(deal.id) %></h3>
+        </ul>
+      <% end %>
+
 <h3>Send out your Deal</h3>
 <%= link_to 'Send Text', text_path %>
 <%= link_to 'Send Email', email_path %>
 <%= link_to 'New Deal', new_deal_path %>
-<h3>Current Deals</h3>
-  <% @vendor.deals.each do |deal| %>
-    <h4><%= link_to deal.title, deal_path(deal) %></h4>
-  <% end %>
+<h3>Active Deals:</h3>
+
+
 <h3><%= link_to "#{@vendor.username}'s Followers", followers_path %></h3>
 <iframe src="/vendors/<%= @vendor.id %>/followers"></iframe>
 
