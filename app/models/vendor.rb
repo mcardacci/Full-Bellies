@@ -10,7 +10,7 @@ class Vendor < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
 
-  def send_followers_sms
+  def send_followers_sms(deal)
     acct_sid = ENV["TWILIO_ACCT_SID"]
     auth_token = ENV["TWILIO_AUTH"]
     @client = Twilio::REST::Client.new acct_sid, auth_token
@@ -27,4 +27,4 @@ class Vendor < ActiveRecord::Base
 
 end
 
-
+.scan(/\d+/).join
