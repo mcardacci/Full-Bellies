@@ -22,4 +22,8 @@ module ApplicationHelper
   def current_user
      return User.find(session[:user_id]) if !!session[:user_id]
   end
+
+  def current_vendor_stripe_link?
+    current_vendor.stripe_user_id
+  end
 end
