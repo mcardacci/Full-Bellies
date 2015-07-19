@@ -2,6 +2,7 @@ class Vendor < ActiveRecord::Base
 	has_secure_password
 	has_many :favorite_vendors
 	has_many :users, through: :favorite_vendors
+  has_many :followers, through: :favorite_vendors, source: :user
 	has_many :deals
 
   validates :email, presence: true, uniqueness: true
