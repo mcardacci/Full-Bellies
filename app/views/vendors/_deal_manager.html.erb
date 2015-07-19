@@ -8,7 +8,7 @@
   <table class="table">
     <tr>
       <td><h4>Create a New Deal:</h4></td>
-      <td><%= link_to 'New Deal', new_deal_path, class: 'btn btn-primary' %></td>
+      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newDeal">New Deal</button></td>
     </tr>
     <tr>
       <td><h4>Send Followers a Text:</h4></td>
@@ -24,3 +24,21 @@
     </tr>
   </table>
 </div>
+
+<div class="container">
+  <div class="modal fade" id="newDeal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">New Deal</h4>
+        </div>
+        <div class="modal-body">
+          <%= render 'deal_form', locals: {deal: @deal} %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

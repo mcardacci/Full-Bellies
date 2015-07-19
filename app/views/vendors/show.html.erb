@@ -25,7 +25,7 @@
   </div>
 </div>
 <% if current_vendors_page?(@vendor) %>
-  <%=render partial: '/vendors/vendor', locals: {vendor: @vendor, current_deals: @current_deals, last_five: @last_five} %>
+  <%=render partial: '/vendors/vendor', locals: {vendor: @vendor, current_deals: @current_deals, last_five: @last_five, deal: @deal} %>
 <% else %>
   <%=render partial: '/vendors/user', locals: {vendor: @vendor, current_deals: @current_deals} %>
 <% end %>
