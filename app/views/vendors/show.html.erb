@@ -1,5 +1,31 @@
+<div class="container">
+  <div id="profile-top-bar" class="row">
+
+    <div class="col-md-4">
+      <h1 id="welcome-user">Hello!</h1>
+    </div>
+
+    <div class="col-md-4">
+      <ul><h3>Current Deals:</h3></ul>
+      <% @current_deals.each do |deal| %>
+        <ul>
+          <h3><%= link_to deal.title, deal_path(deal) %></h3>
+        </ul>
+      <% end %>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <%= link_to image_tag('profile.png', size: '150x150'), id: 'profile' %><br>
+      <hr>
+      <h3>Username: <%= @vendor.name %></h3>
+      <h4>Phone: <%= @vendor.phone_number %></h4>
+      <h4>Email: <%= @vendor.email %></h4>
+      <h4>Following: <span class="badge"><%= @vendor.favorite_vendors.count %></span></h4>
+    </div>
+  </div>
+</div>
 <% if current_vendors_page?(@vendor) %>
-  <%=render partial: '/vendors/vendor', locals: {vendor: @vendor} %>
+  <%=render partial: '/vendors/vendor', locals: {vendor: @vendor, current_deals: @current_deals, last_five: @last_five} %>
 <% else %>
   <%=render partial: '/vendors/user', locals: {vendor: @vendor, current_deals: @current_deals} %>
 <% end %>
