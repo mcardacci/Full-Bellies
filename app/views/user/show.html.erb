@@ -8,9 +8,8 @@
     <div class="col-md-4"></div>
 
     <div class="col-md-4 text-center">
-      <% if session[:user_id] == @user.id %>
-        <%= render partial: 'user/profile_pic', locals: {user: @user} %>
-      <% end %><br>
+      <%= render partial: 'user/profile_pic', locals: {user: @user} %>
+      <br>
       <hr>
       <h3>Username: <%= @user.username %></h3>
       <h4>Phone: <%= @user.phone_number %></h4>
