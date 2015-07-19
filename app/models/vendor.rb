@@ -10,6 +10,9 @@ class Vendor < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true
 
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/profile.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
   def send_followers_sms(deal)
     acct_sid = ENV["TWILIO_ACCT_SID"]
     auth_token = ENV["TWILIO_AUTH"]
