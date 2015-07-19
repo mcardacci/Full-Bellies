@@ -1,68 +1,54 @@
+var stockholm = new google.maps.LatLng(59.32522, 18.07002);
+var parliament = new google.maps.LatLng(59.327383, 18.06747);
 var marker;
-function createMarker(coords, map, title){
-  marker = new google.maps.Marker({
-    position: coords,
-    map: map,
-    title: title
-  });
-}
+var map;
 
-function createImage(url){
-  var image = {
-    url: url,
-    // This marker is 32 pixels wide by 32 pixels tall.
-    size: new google.maps.Size(32, 32),
-    // The origin for this image is 0,0.
-    origin: new google.maps.Point(0,0),
-    // The anchor for this image is the base of the flagpole at 0,32.
-    anchor: new google.maps.Point(0, 32)
+function initialize() {
+  var mapOptions = {
+    zoom: 13,
+    center: parliament
   };
-  return image;
-}
 
-function createCustomMarker(coords,map,title){
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+
   marker = new google.maps.Marker({
-    position: coords,
-    map: map,
-    title: title,
-    // icon: createImage("/assets/icon.png")
+    map:map,
+    draggable:true,
+    animation: google.maps.Animation.DROP,
+    position: parliament
   });
+  google.maps.event.addListener(marker, 'click', toggleBounce);
 }
 
-function createInfoWindow(text){
-  var infowindow = new google.maps.InfoWindow({
-    content: text
-  });
-  return infowindow;
+function toggleBounce() {
+
+  if (marker.getAnimation() != null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
 }
 
-var info = createInfoWindow("Congratulations!");
-google.maps.event.addListener(marker, 'click', function() {
-  info.open(map,marker);
-});
-
-
-
-
-
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 //to pin drop on an address
 // map here is your google.map.Map element
 
-//     var myLatlng = new google.maps
-// geocoder.geocode({ 'address': addressThatYouWannaDraw }, function (results, status) {
-//     if (status == google.maps.GeocoderStatus.OK) {
-//       pt = results[0].geometry.location;
+  //   var myLatlng = new google.maps
+  //   geocoder.geocode({ 'address': addressThatYouWannaDraw }, function (results, status) {
+  //   if (status == google.maps.GeocoderStatus.OK) {
+  //     pt = results[0].geometry.location;
 
-//       var myMarkerOpts = {
-//         position: pt,
-//         map: map
-//       };
+  //     var myMarkerOpts = {
+  //       position: pt,
+  //       map: map
+  //     };
 
-//       var marker = new google.maps.Marker(myMarkerOpts);
-//     }
-//   });
+  //     var marker = new google.maps.Marker(myMarkerOpts);
+  //   }
+  // });
 
 //experiment!!
 // function initialize() {
