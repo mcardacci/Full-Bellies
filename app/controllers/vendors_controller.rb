@@ -1,4 +1,9 @@
 class VendorsController < ApplicationController
+
+  def index
+    @vendors = Vendor.all.sort_by {|vendor| vendor.deals.count}.reverse
+  end
+
   def new
     @vendor = Vendor.new
     if request.xhr?

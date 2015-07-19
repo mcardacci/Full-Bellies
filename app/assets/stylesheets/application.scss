@@ -16,3 +16,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+.new-deal {
+  margin: auto;
+  float: none;
+  background-color: #f6f6f6;
+  text-align: center;
+  border-radius: 2%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 2px 2px 2px #a8a8a8;
+}
