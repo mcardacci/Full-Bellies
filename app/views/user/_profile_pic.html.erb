@@ -1,9 +1,14 @@
+
 <% if user.avatar.exists? %>
   <%= image_tag user.avatar.url(:medium) %>
 <% else %>
-  <%= link_to image_tag('profile.png', size: '150x150'), id: 'profile' %>
+  <%= link_to image_tag('profile.png', size: '150x150'), "data-toggle" => "modal", "data-target" => "#pic-upload" %>
+  </button>
+  <%= render partial: 'user/update_profile_pic' %>
+
   <%= form_for @user, method: "put", :html => { :multipart => true } do |form| %>
     <%= form.file_field :avatar %>
     <%= form.submit %>
   <% end %>
 <% end %>
+
