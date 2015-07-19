@@ -1,4 +1,7 @@
-<h1>user show page</h1>
-<% if session[:user_id] == @user.id %>
-	<%= link_to 'Edit Profile', edit_user_path(@user.id) %>
-<% end %>
+<div class="container">
+  <h1 id="welcome-user">Hello!</h1>
+  <% if session[:user_id] == @user.id %>
+    <%= link_to image_tag('profile.png'), class: 'img-circle' %>
+  	<%= link_to 'Edit Profile', edit_user_path(@user.id) %>
+  <% end %>
+</div>
