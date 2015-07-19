@@ -30,7 +30,7 @@ gem 'twilio-ruby'
 gem 'sendgrid'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'paperclip', github: 'thoughtbot/paperclip'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
