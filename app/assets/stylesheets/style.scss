@@ -5,6 +5,7 @@
   text-align: center;
   vertical-align: middle;
   line-height: 90px;
+  width: 100%;
   padding-bottom: 100px;
   padding-top: 50px
 }
@@ -21,9 +22,18 @@
   color: inherit;
 }
 
+#nav-top {
+  background-color: #E5E4D7;
+}
+
 #glyph-container {
-  margin-top: 30px;
   margin-bottom: 50px;
+  background-color: #E5E4D7;
+}
+
+#glyph-container .row {
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 #marketing-glyph {
