@@ -51,7 +51,7 @@ vendor5 = Vendor.create(
   phone_number: Faker::PhoneNumber.phone_number
   )
 
-### Followers Data for each Vendor
+### Dummy Followers Data for each Vendor
 20.times do
   vendor1.users.create(
     username: Faker::Internet.user_name,
@@ -90,6 +90,15 @@ end
 
 10.times do
   vendor4.users.create(
+    username: Faker::Internet.user_name,
+    email: Faker::Internet.safe_email,
+    password: Faker::Internet.password,
+    phone_number: Faker::PhoneNumber.phone_number,
+    profile_pic:  Faker::Avatar.image)
+end
+
+8.times do
+  vendor5.users.create(
     username: Faker::Internet.user_name,
     email: Faker::Internet.safe_email,
     password: Faker::Internet.password,
