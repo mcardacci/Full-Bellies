@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :purchased_items, only: [:new, :create]
   end
   resources :user
+  get 'stripe', to: 'vendors#stripe_acct'
 
 
   get '/vendors/:id/text' => 'vendors#send_sms', as: 'text'
