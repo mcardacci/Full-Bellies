@@ -1,0 +1,11 @@
+<%= form_for @user, url: {action: "create", controller:"user"}, html: {method: "post"} do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %><br/>
+  <%= f.label :phone_number %>
+  <%= f.text_field :phone_number %><br/>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br/>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br/>
+  <%= f.submit %>
+<% end %>
