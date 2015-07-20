@@ -1,0 +1,14 @@
+<body>
+  <h1>Ahoy!</h1>
+  <p>
+    It appears someone has made a purchase!<br>
+  </p>
+  <p>It looks like <%= @user.username %> has made a purchase.</p>
+  <p>Please note, they are responsible for pick up but we recommend you calling/emailing them to confirm their order and/or if you are closing soon</p>
+  <h4>Phone: <%= @user.phone_number %></h4>
+  <h4>Email: <%= @user.email %></h4>
+  <p>
+    To see your inventory, just follow this link: <%= @url %>.
+  </p>
+  <p>Thanks for using Full Bellies and have a great day!</p>
+</body>
