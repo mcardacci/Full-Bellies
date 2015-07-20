@@ -34,7 +34,6 @@ FullBellies uses a number of open source projects to work properly:
 * [Sendgrid] - transactional and marketing email through one reliable platform
 * [Paperclip] - easy file attachment library for Active Record
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [jQuery] - duh
 
 ### Version
 1.0.0
