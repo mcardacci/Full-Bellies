@@ -16,8 +16,8 @@ class Vendor < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   def send_followers_sms(deal)
-    acct_sid = ENV["TWILIO_ACCT_SID"]
-    auth_token = ENV["TWILIO_AUTH"]
+    acct_sid = ENV['TWILIO_ACCT_SID']
+    auth_token = ENV['TWILIO_AUTH']
 
     @deal = deal
     @vendor = Vendor.find(deal.vendor_id)
@@ -25,7 +25,6 @@ class Vendor < ActiveRecord::Base
     @names = @vendor.followers.pluck(:username)
     @client = Twilio::REST::Client.new acct_sid, auth_token
     from = '+12055442814'
-    # followers = {'+16033400606' => 'Lowell'}
     @phones.each do |num|
       message = @client.account.messages.create(
         :from => from,
