@@ -38,7 +38,7 @@ describe SessionsController do
 
     it "should not login a vendor with incorrect credentials" do
       post :vendor_create, {vendor: {username: "wrong name", password: @registered_vendor.password}}
-      expect(response).to redirect_to new_session_path
+      expect(response).to redirect_to new_vendor_session_path
     end
   end
 

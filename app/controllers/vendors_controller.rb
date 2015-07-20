@@ -19,7 +19,7 @@ class VendorsController < ApplicationController
       session[:vendor_id] = @vendor.id
       redirect_to vendor_path(@vendor)
     else
-      flash[:notice] = "Your vendor name exists already"
+      flash[:notice] = "There was a problem with your submission"
       redirect_to new_vendor_path
     end
   end
@@ -109,7 +109,7 @@ class VendorsController < ApplicationController
   private
 
     def vendor_params
-      params.fetch(:vendor, {}).permit(:username, :password, :email, :name, :address, :phone_number, :avatar)
+      params.fetch(:vendor, {}).permit(:username, :password, :email, :name, :address, :phone_number, :avatar, :password_confirmation)
     end
 
 end
