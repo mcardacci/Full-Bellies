@@ -38,10 +38,6 @@ FullBellies uses a number of open source projects to work properly:
 ### Version
 1.0.0
 
-### Tech
-
-Dillinger uses a number of open source projects to work properly:
-
 ### Development
 
 Want to contribute? Great! Feel free to create an issue or open a pull request!
