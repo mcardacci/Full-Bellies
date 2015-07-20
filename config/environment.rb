@@ -2,15 +2,14 @@
 require File.expand_path('../application', __FILE__)
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['SEND_GRID_USERNAME'],
-  :password => ENV['SEND_GRID_PASS'],
+  :user_name => ENV['MAILCHIMP_USERNAME'],
+  :password => ENV['MAILCHIMP_API'],
   :domain => 'http://localhost:3000',
-  :address => 'smtp.sendgrid.net',
+  :address => 'smtp.mandrillapp.com',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
 }
-
 
 # Initialize the Rails application.
 Rails.application.initialize!
