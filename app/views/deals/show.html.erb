@@ -7,11 +7,12 @@
   <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'purchase-button'%>
   <div id="purchase-form-area">
   </div>
-
-  <% if current_vendors_deal?(@deal) %>
-    <%= link_to 'edit', edit_deal_path(@deal.id) %>
-    <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
-  <% end %>
+  <div id="button-content">
+    <% if current_vendors_deal?(@deal) %>
+      <%= link_to 'edit', edit_deal_path(@deal.id) %>
+      <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
+    <% end %>
+  </div>
   <div id="panel">
     <input type="hidden" id="address" type="textbox" value="<%= @deal.vendor.address %>">
   </div>
