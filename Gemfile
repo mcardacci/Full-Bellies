@@ -31,6 +31,7 @@ gem 'sendgrid'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '< 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
