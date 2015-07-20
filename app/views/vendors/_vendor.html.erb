@@ -9,6 +9,14 @@
       <% end %>
     </div>
     <div class="col-md-6">
+        <% unless current_vendor_stripe_link? %>
+          <div id="stripebuttondiv">
+            <button class="btn btn-danger"><a id="stripebutton"href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_6dd8N58cZhASMNZeI9SdZyJusiVkoueg&scope=read_write">Create Stripe Account</a></button>
+            <div>
+              <p>You haven't created and/or linked your account to stripe yet. Please do this so you can post deals on Full-Bellies.</p>
+            </div>
+          </div>
+        <% end %>
       <%= render 'deal_manager', locals: {deal: @deal} %>
     </div>
     <div class="col-md-3">
