@@ -4,9 +4,10 @@
   <p>quantity: <%=@deal.item_quantity%></p><br/>
   <p>price per item: <span id='dealprice'><%= @deal.item_price %></span></p><br/>
   <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %> </span><br/>
-  <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'purchase-button'%>
-  <div id="purchase-form-area">
-  </div>
+  <% if current_user %>
+    <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'purchase-button'%>
+  <% end %>
+  <div id="purchase-form-area"></div>
   <div id="button-content">
     <% if current_vendors_deal?(@deal) %>
       <%= link_to 'edit', edit_deal_path(@deal.id) %>
