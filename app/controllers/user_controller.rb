@@ -16,6 +16,7 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @vendor = Vendor.new
   end
 
 
