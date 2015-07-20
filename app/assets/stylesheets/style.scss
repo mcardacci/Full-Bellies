@@ -89,6 +89,106 @@
     z-index: 1051 !important;
 }
 
+#dealvendorname {
+  width: 30%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#dealindexitem {
+  width: 80%;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: -1px 1px 3px #d3d3d3;
+  margin-left: 10em;
+  margin-right: 10em;
+  display: inline-block;
+  height: 12em;
+}
+
+#dealindexpage{
+  display: inline-block;
+  width: 100%;
+}
+
+#dealindexitem li {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: block;
+  height: 10em;
+}
+
+#dealindexitems {
+  display: inline-block;
+  width: 50%;
+}
+
+#dealprofilepicture {
+  display: block;
+  height: 10em;
+  margin-right: 4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  box-shadow: -1px 1px 3px #d3d3d3;
+  padding-top: 20px;
+  padding-bottom: auto;
+}
+
+#dealprofilepicture div{
+  margin-left: 10em;
+}
+
+.priceandquantity {
+  font-weight: bold;
+}
+
+#dealindexinfo {
+  width: 40%;
+  display: inline-block;
+  margin-right: 0px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  vertical-align: top;
+  margin-left: 5em;
+  position: fixed;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  height: 12em;
+  box-shadow: -1px 1px 3px #d3d3d3;
+}
+
+#dealindexitem div {
+  margin-left: 10em;
+}
+
+#dealcontent {
+  margin: 2em;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  box-shadow: -1px 1px 3px #d3d3d3;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#dealpictures {
+  width: 40%;
+  display: inline-block;
+  margin-left: 7em;
+
+}
 /*neon green 92CD00*/
 /*grey E5E4D7*/
 /*tan FFCF79*/

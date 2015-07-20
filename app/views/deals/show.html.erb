@@ -1,23 +1,41 @@
-<div class="container">
-  <h2><%= @deal.title %></h2> <br/>
-  <p><%= @deal.description%></p><br/>
-  <p>quantity: <%=@deal.item_quantity%></p><br/>
-  <p>price per item: <span id='dealprice'><%= @deal.item_price %></span></p><br/>
-  <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %> </span><br/>
-  <% if current_user %>
-    <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'purchase-button'%>
-  <% end %>
-  <div id="purchase-form-area"></div>
-  <div id="button-content">
-    <% if current_vendors_deal?(@deal) %>
-      <%= link_to 'edit', edit_deal_path(@deal.id) %>
-      <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
+<div id="dealshowpage"class="container">
+  <div id="dealcontent">
+    <h2><%= @deal.title %></h2> <br/>
+    <p><%= @deal.description%></p>
+    <p class="priceandquantity">Quantity: <%=@deal.item_quantity%>  |  Price Per Item: $<span id='dealprice'><%= @deal.item_price %></span></p>
+    <span class="priceandquantity"> Time Until Expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %> </span><br/>
+    <% if current_user %>
+      <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'btn btn-lg btn-primary purchase-button'%>
     <% end %>
+    <div id="purchase-form-area">
+    </div>
+    <div id="button-content">
+      <% if current_vendors_deal?(@deal) %>
+        <%= link_to 'edit', edit_deal_path(@deal.id) %>
+        <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
+      <% end %>
+    </div>
   </div>
-  <div id="panel">
-    <input type="hidden" id="address" type="textbox" value="<%= @deal.vendor.address %>">
+  <div id="dealpictures">
+    <div id="dealprofilepicture">
+      <% if @deal.vendor.avatar.exists? %>
+        <%= link_to image_tag(@deal.vendor.avatar.url(:thumb), class: "img-circle", id: "dealvendorimage"), @deal.vendor, class: "img-circle col-md-2" %>
+      <% end %>
+      <div>
+        <%= link_to @deal.vendor.name, @deal.vendor %>
+      </div>
+      <div>
+        <span>Phone: <%= @deal.vendor.phone_number %></span>
+      </div>
+      <div>
+        <span>Address: <%= @deal.vendor.address %></address>
+      </div>
+    </div>
+    <div id="panel">
+      <input type="hidden" id="address" type="textbox" value="<%= @deal.vendor.address %>">
+    </div>
+    <div id="map-canvas"></div>
   </div>
-  <div id="map-canvas"></div>
 </div>
 <!-- renders modal for login (user & vendor) -->
 <%= render 'welcome/vendor_login', locals: {@user => @user, @vendor => @vendor}%>

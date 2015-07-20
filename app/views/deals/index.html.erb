@@ -1,8 +1,15 @@
-<ul>
-  <% @deals.each do |deal| %>
-    <%=render partial: '/deals/deal', locals: {deal: deal} %>
-  <% end %>
-</ul>
+<div id="dealindexpage">
+  <div id="dealindexitems">
+    <% @deals.each do |deal| %>
+      <%=render partial: '/deals/deal', locals: {deal: deal} %>
+    <% end %>
+  </div>
+  <div id="dealindexinfo">
+    <h2>Enjoy The Current Deals</h2>
+    <h4>Remember that if you purchase a deal, you are committing to pick up the food 15 minutes after the deal's end time.</h4>
+  </div>
+</div>
+
 <!-- renders modal for login (user & vendor) -->
 <%= render 'welcome/vendor_login', locals: {@user => @user, @vendor => @vendor}%>
 <%= render 'welcome/user_login', locals: {@user => @user, @vendor => @vendor}%>
