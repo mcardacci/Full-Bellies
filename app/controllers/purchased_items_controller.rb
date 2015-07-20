@@ -28,6 +28,7 @@ class PurchasedItemsController < ApplicationController
         :currency    => 'usd'
       )
       flash[:success] = "Your purchase was completed successfully!"
+      UserMailer.email_vendor(deal, purchased_item).deliver_now
       redirect_to user_path(current_user.id)
     else
       flash[:error] = "There was an error with your purchase. Please check the expiration time and quantity to make sure you're making a valid purchase"
