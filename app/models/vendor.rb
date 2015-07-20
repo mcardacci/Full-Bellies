@@ -41,7 +41,9 @@ class Vendor < ActiveRecord::Base
   end
 
   def self.post_back(code)
-    uri = URI("https://connect.stripe.com/oauth/token?client_secret=sk_test_C1J4PJTYL4l7YCcZ1dBsyQBP&code=#{code}&grant_type=authorization_code")
+    client_id = ENV['STRIPE_CLIENT_ID']
+    secret = ENV['STRIP_SECRET_KEY']
+    uri = URI("https://connect.stripe.com/oauth/token?client_secret=#{secret}&code=#{code}&grant_type=authorization_code")
     res = Net::HTTP.post_form(uri, 'q' => 'ruby')
     return res
   end
