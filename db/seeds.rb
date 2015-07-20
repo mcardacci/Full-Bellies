@@ -8,7 +8,8 @@ vendor1 = Vendor.create(
   name: "ross's pizza",
   bio: "Casual spot serving pizzas, family-style pasta & Italian favorites, with outdoor seating.",
   address: "2 Gold St, New York, NY 10038",
-  phone_number: Faker::PhoneNumber.phone_number
+  phone_number: Faker::PhoneNumber.phone_number,
+  avatar: "http://www.leeabbamonte.com/wp-content/uploads/2011/04/joesmainpizza.bmp"
   )
 
 vendor2 = Vendor.create(
@@ -48,6 +49,16 @@ vendor5 = Vendor.create(
   name: "Bob's Tacos",
   bio: "Chef Bob Bloomfield's take on upscale Mexican street food in a vibrant, colorful setting.",
   address: "145 E 39th St, New York, NY 10016",
+  phone_number: Faker::PhoneNumber.phone_number
+  )
+
+vendor6 = Vendor.create(
+  username: "Dan",
+  password: "123",
+  email: "dan@example.com",
+  name: "The Green Table",
+  bio: "Farm-to-table restaurant in Chelsea Market offers locally sourced, organic food & wine.",
+  address: "Chelsea Market, 75 Ninth Ave, New York, NY 10011",
   phone_number: Faker::PhoneNumber.phone_number
   )
 
@@ -155,5 +166,26 @@ vendor5.deals.create(
   end_time: Time.local(2016.to_i, 1.to_i, 1.to_i, 00.to_i, 00.to_i),
   )
 
+vendor2.deals.create(
+  title: "30 muffins available from last night!",
+  description: "Start the day off with a deal on muffins for $.50 each!  These muffins are left over from last night but we have to get rid of them to make room for the morning rush!",
+  item_quantity: 30,
+  item_price: 0.50,
+  end_time: Time.local(2016.to_i, 1.to_i, 1.to_i, 00.to_i, 00.to_i),
+  )
 
+vendor6.deals.create(
+  title: "25 servings of our special Mac & Cheese",
+  description: "We've got a ton of Mac & Cheese leftover from an event tonight!  Staying true to our name we don't want to waste one serving of this dish.  Enjoy our unique take on Mac & Cheese with goat cheese, Colby, cheddar & parmesan, herbed breadcrumbs.",
+  item_quantity: 25,
+  item_price: 1.00,
+  end_time: Time.local(2016.to_i, 1.to_i, 1.to_i, 00.to_i, 00.to_i),
+  )
 
+vendor6.deals.create(
+  title: "18 Red Quinoa Falafel Platters",
+  description: "Red Quinoa Falafel Platter – tahini, warm chick peas, seasonal pickles, fresh herbs, naan bread",
+  item_quantity: 18,
+  item_price: 2.50,
+  end_time: Time.local(2016.to_i, 1.to_i, 1.to_i, 00.to_i, 00.to_i),
+  )
