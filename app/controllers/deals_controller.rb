@@ -38,6 +38,8 @@ class DealsController < ApplicationController
 
   def show
     @deal = Deal.find(params[:id])
+    @user = User.new
+    @vendor = Vendor.new
   end
 
   def destroy

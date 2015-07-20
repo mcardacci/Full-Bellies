@@ -25,6 +25,7 @@ class VendorsController < ApplicationController
   def show
     @deal = Deal.new
     @vendor = Vendor.find(params[:id])
+    @user = User.new
     @current_deals = @vendor.deals.where("end_time > ? AND item_quantity > ?", Time.now, 0).order(created_at: :desc)
     @last_five = @vendor.deals.limit(5)
   end
