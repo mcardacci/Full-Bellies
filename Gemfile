@@ -28,6 +28,7 @@ gem 'stripe'
 gem 'bootstrap-sass'
 gem 'twilio-ruby'
 gem 'sendgrid'
+gem 'mail'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'paperclip', github: 'thoughtbot/paperclip'
