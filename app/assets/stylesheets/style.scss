@@ -123,6 +123,27 @@
   width: 50%;
 }
 
+#dealprofilepicture {
+  display: block;
+  height: 10em;
+  margin-right: 4em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  box-shadow: -1px 1px 3px #d3d3d3;
+  padding-top: 20px;
+  padding-bottom: auto;
+}
+
+#dealprofilepicture div{
+  margin-left: 10em;
+}
+
+.priceandquantity {
+  font-weight: bold;
+}
+
 #dealindexinfo {
   width: 40%;
   display: inline-block;
@@ -137,13 +158,33 @@
   padding: 20px;
   text-align: center;
   height: 12em;
-
+  box-shadow: -1px 1px 3px #d3d3d3;
 }
 
 #dealindexitem div {
   margin-left: 10em;
 }
 
+#dealcontent {
+  margin: 2em;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  box-shadow: -1px 1px 3px #d3d3d3;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#dealpictures {
+  width: 40%;
+  display: inline-block;
+  margin-left: 7em;
+
+}
 /*neon green 92CD00*/
 /*grey E5E4D7*/
 /*tan FFCF79*/
