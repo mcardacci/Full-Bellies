@@ -23,4 +23,8 @@ class ApplicationController < ActionController::Base
       redirect_to deals_path
     end
   end
+
+  def current_vendor
+    return Vendor.find(session[:vendor_id]) if vendor_logged_in?
+  end
 end
