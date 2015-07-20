@@ -8,8 +8,7 @@ vendor1 = Vendor.create(
   name: "ross's pizza",
   bio: "Casual spot serving pizzas, family-style pasta & Italian favorites, with outdoor seating.",
   address: "2 Gold St, New York, NY 10038",
-  phone_number: Faker::PhoneNumber.phone_number,
-  avatar: "http://www.leeabbamonte.com/wp-content/uploads/2011/04/joesmainpizza.bmp"
+  phone_number: Faker::PhoneNumber.phone_number
   )
 
 vendor2 = Vendor.create(
