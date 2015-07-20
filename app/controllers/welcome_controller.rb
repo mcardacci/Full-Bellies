@@ -7,6 +7,8 @@ class WelcomeController < ApplicationController
 
 
   def about
+    @user = User.new
+    @vendor = Vendor.new
   end
 
 end

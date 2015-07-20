@@ -16,5 +16,8 @@
   <% end %>
   <%= render partial: 'layouts/nav' %>
   <%= yield %>
+  <!-- renders modal for vendor sign up -->
+  <%= render 'welcome/user_login', locals: {@user => @user, @vendor => @vendor}%>
+  <%= render 'welcome/signup_vendor', locals: {@vendor => @vendor} %>
 </body>
 </html>
