@@ -102,7 +102,6 @@ class VendorsController < ApplicationController
     response_hash = JSON.parse(response.body)
     current_vendor.update_attributes(access_token: response_hash["access_token"], livemode: response_hash["livemode"], refresh_token: response_hash["refresh_token"], token_type: response_hash["token_type"], stripe_publishable_key: response_hash["stripe_publishable_key"], stripe_user_id: response_hash["stripe_user_id"], scope: response_hash["scope"] )
     redirect_to vendor_path(current_vendor.id)
-
   end
 
 
