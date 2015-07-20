@@ -69,6 +69,10 @@ ActiveRecord::Schema.define(version: 20150719222748) do
     t.string   "phone_number"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.string   "access_token"
     t.boolean  "livemode"
     t.string   "refresh_token"
@@ -76,10 +80,6 @@ ActiveRecord::Schema.define(version: 20150719222748) do
     t.string   "stripe_publishable_key"
     t.string   "stripe_user_id"
     t.string   "scope"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
   end
 
 end
