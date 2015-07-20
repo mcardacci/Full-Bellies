@@ -1,8 +1,9 @@
-html, body, #map-canvas {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+#map-canvas {
+  height:400px;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
 
 #banner{
   background-image: url('banner.png');
