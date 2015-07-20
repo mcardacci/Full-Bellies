@@ -12,4 +12,9 @@
     <%= link_to 'edit', edit_deal_path(@deal.id) %>
     <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
   <% end %>
+  <div id="panel">
+    <input type="hidden" id="address" type="textbox" value="<%= @deal.vendor.address %>">
+  </div>
+  <div id="map-canvas"></div>
 </div>
+
