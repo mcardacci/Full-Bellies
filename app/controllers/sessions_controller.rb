@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to deals_path
     else
-      redirect_to new_session_path
+      flash[:error] = "There was a problem with your submission"
+      redirect_to root_path
     end
   end
 
@@ -21,7 +22,8 @@ class SessionsController < ApplicationController
       session[:vendor_id] = @vendor.id
       redirect_to vendor_path(@vendor.id)
     else
-      redirect_to new_vendor_session_path
+      flash[:error] = "There was a problem with your submission"
+      redirect_to root_path
     end
   end
 

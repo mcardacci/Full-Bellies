@@ -3,6 +3,8 @@ class DealsController < ApplicationController
 
   def index
     @deals = Deal.where("end_time > ? AND item_quantity > ?", Time.now, 0).order(created_at: :desc)
+    @user = User.new
+    @vendor = Vendor.new
   end
 
   def new
@@ -36,6 +38,8 @@ class DealsController < ApplicationController
 
   def show
     @deal = Deal.find(params[:id])
+    @user = User.new
+    @vendor = Vendor.new
   end
 
   def destroy

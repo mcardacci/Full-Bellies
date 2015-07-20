@@ -1,0 +1,28 @@
+<nav id="nav-top" class="collapse navbar-collapse" role="banner">
+  <a href="/" class="navbar-brand">FullBellies</a>
+  <% if session[:user_id] || session[:vendor_id] %>
+    <ul id="nav-top" class="nav navbar-nav">
+      <li><%= link_to 'Logout', logout_path, method: 'delete' %></li>
+    </ul>
+    <% if session[:vendor_id] %>
+      <ul id="nav-top" class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Vendor Profile', vendor_path(session[:vendor_id]) %></li>
+      </ul>
+    <% else %>
+      <ul id="nav-top" class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Profile Page', user_path(session[:user_id]) %></li>
+      </ul>
+    <% end %>
+  <% else %>
+    <ul id="nav-top" class="nav navbar-nav">
+      <li data-toggle="modal" data-target="#userModal"><a href="#">Login</a></li>
+      <li data-toggle="modal" data-target="#vendorSignup"> <a href="#">Are you a business?</a></li>
+      <li data-toggle="modal" data-target="#signup"><a href="#">Signup</a></li>
+
+    </ul>
+  <% end %>
+  <ul id="nav-top" class="nav navbar-nav">
+    <li><%= link_to 'Deals', deals_path %></li>
+    <li><%= link_to 'Mission', about_path %></li>
+  </ul>
+</nav>

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="modal fade" id="vendorSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -7,7 +7,7 @@
           <h4 class="modal-title" id="myModalLabel">Sign Up!</h4>
         </div>
         <div class="modal-body">
-          <%= render 'welcome/new_vendor' %>
+          <%= render 'user/user_form', locals: {deal: @deal} %>
         </div>
       </div>
     </div>
