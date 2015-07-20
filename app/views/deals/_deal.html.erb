@@ -1,19 +1,22 @@
-<ul>
+<ul class="list-unstyled">
   <li>
+    <% if vendor.avatar.exists? %>
+      <%= image_tag vendor.avatar.url(:small), class: 'img-rounded' %>
+    <% end %>
     <%= link_to deal.title, deal %>
     <%= link_to deal.vendor.name, deal.vendor %>
     <%= deal.item_price %>
     <%= deal.item_quantity %><br/>
     <span> time until expiration: <%= distance_of_time_in_words(Time.now.utc,deal.end_time) %></span>
-  </li>
-  <p><span class="follower-count"><%= deal.vendor.favorite_vendors.count %></span> Followers </p>
-  <% if session[:user_id] %>
-    <% if deal.vendor.favorite_vendors.exists?(user_id: session[:user_id]) %>
-      <%= link_to "Unfollow", unfollow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "unfollow-button", method: :delete %>
-    <% else %>
-    <%= link_to "Follow Vendor", follow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "follow-button", method: :put %>
+    <p><span class="follower-count"><%= deal.vendor.favorite_vendors.count %></span> Followers </p>
+    <% if session[:user_id] %>
+      <% if deal.vendor.favorite_vendors.exists?(user_id: session[:user_id]) %>
+        <%= link_to "Unfollow", unfollow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "unfollow-button", method: :delete %>
+      <% else %>
+        <%= link_to "Follow Vendor", follow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "follow-button", method: :put %>
+      <% end %>
     <% end %>
-  <% end %>
+  </li>
   <hr>
 </ul>
 
