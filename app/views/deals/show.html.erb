@@ -17,4 +17,9 @@
   </div>
   <div id="map-canvas"></div>
 </div>
-
+<!-- renders modal for login (user & vendor) -->
+<%= render 'welcome/vendor_login', locals: {@user => @user, @vendor => @vendor}%>
+<%= render 'welcome/user_login', locals: {@user => @user, @vendor => @vendor}%>
+<!-- renders modal for vendor sign up -->
+<%= render 'welcome/signup_vendor', locals: {@vendor => @vendor} %>
+<%= render 'user/new_user', locals: {@user => @user, @vendor => @vendor}%>

@@ -3,4 +3,9 @@
     <%=render partial: '/deals/deal', locals: {deal: deal} %>
   <% end %>
 </ul>
-
+<!-- renders modal for login (user & vendor) -->
+<%= render 'welcome/vendor_login', locals: {@user => @user, @vendor => @vendor}%>
+<%= render 'welcome/user_login', locals: {@user => @user, @vendor => @vendor}%>
+<!-- renders modal for vendor sign up -->
+<%= render 'welcome/signup_vendor', locals: {@vendor => @vendor} %>
+<%= render 'user/new_user', locals: {@user => @user, @vendor => @vendor}%>
