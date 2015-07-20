@@ -3,7 +3,3 @@
     <%=render partial: '/deals/deal', locals: {deal: deal} %>
   <% end %>
 </ul>
-<div id="panel">
-  <input type="hidden" id="address" type="textbox" value="<%= @deals.last.vendor.address %>">
-</div>
-<div id="map-canvas"></div>
