@@ -1,13 +1,12 @@
-<div id="vendorsessionnew" class="container">
-  <%= form_for @vendor, url: '/login_vendor' do |f|%>
-    <div class="form-group">
-      <%= f.label :username, 'Username:' %><br>
-      <%= f.text_field :username, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password, 'Password:' %><br>
-      <%= f.password_field :password, class: "form-control" %>
-    </div>
-    <%= f.submit 'Log In!', class: 'btn btn-warning' %>
-  <% end %>
-</div>
+<%= form_for @vendor, url: '/login_vendor' do |f|%>
+  <div class="form-group">
+    <%= f.label :username, 'Username:' %><br>
+    <%= f.text_field :username, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, 'Password:' %><br>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <%= f.submit 'Log In!', class: 'btn btn-warning' %>
+<% end %>
+
