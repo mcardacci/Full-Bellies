@@ -80,9 +80,11 @@
 
 #stripebuttondiv {
   text-align: center;
-  border: 3px solid #d43f3a;
-  border-radius: 3px;
-  background-color: yellow;
+}
+
+#stripebuttondiv h1 {
+  color: #2C6700;
+  font-family: 'Pacifico', cursive;
 }
 
 .pac-container {

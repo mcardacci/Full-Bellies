@@ -30,8 +30,6 @@
   </div>
 </div>
 
-
-
 <!-- Modal for Stripe Sign Up -->
 <div class="container">
   <div class="modal fade" id="stripeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -39,14 +37,14 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Sign Up!</h4>
+          <h4 class="modal-title" id="myModalLabel">Sign up with Stripe!</h4>
         </div>
         <div class="modal-body">
           <div id="stripebuttondiv">
-            <button class="btn btn-danger"><a id="stripebutton"href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_6dd8N58cZhASMNZeI9SdZyJusiVkoueg&scope=read_write">Create Stripe Account</a></button>
-            <div>
-              <p>You haven't created and/or linked your account to stripe yet. Please do this so you can post deals on Full-Bellies.</p>
-            </div>
+            <h1>You need to link or create your Stripe account!</h1>
+            <p>Follow the link below</p>
+            <a id="stripebutton"href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=<%=ENV['STRIPE_CLIENT_ID']%>&scope=read_write"><button class="btn btn-primary">Create or Link Stripe</button>
+            <p></p>
           </div>
         </div>
       </div>

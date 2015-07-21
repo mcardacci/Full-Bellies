@@ -11,6 +11,10 @@
       <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newDeal">New Deal</button></td>
     </tr>
     <tr>
+      <td><h4>Connect to Stripe:</h4></td>
+      <td><a id="stripebutton"href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=<%=ENV['STRIPE_CLIENT_ID']%>&scope=read_write"><button class="btn btn-primary">Launch Stripe</button></td></a>
+    </tr>
+    <tr>
       <td><h4>Send Followers a Text:</h4></td>
       <td><%= link_to 'Send Text', text_path, class: 'btn btn-warning' %></td>
     </tr>
@@ -24,7 +28,7 @@
     </tr>
   </table>
 </div>
-
+<!-- Modal for new deal -->
 <div class="container">
   <div class="modal fade" id="newDeal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -40,5 +44,3 @@
     </div>
   </div>
 </div>
-
-
