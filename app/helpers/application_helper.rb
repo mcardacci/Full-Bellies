@@ -26,4 +26,15 @@ module ApplicationHelper
   def current_vendor_stripe_link?
     current_vendor.stripe_user_id
   end
+
+  def favorites_deals(user)
+    deals = []
+    user.favorites.each do |vendor|
+      vendor.deals.each do |deal|
+        deals.push(deal)
+      end
+    end
+    deals
+  end
+
 end
