@@ -2,7 +2,9 @@
   <ul class="list-unstyled">
       <li>
         <% if deal.vendor.avatar.exists? %>
-          <%= link_to image_tag(deal.vendor.avatar.url(:thumb), class: "img-circle", id: "dealvendorimage"), deal.vendor, class: "img-circle col-md-2" %>
+          <%= link_to image_tag(deal.vendor.avatar.url(:thumb), class: "img-circle", id: "dealvendorimage"), deal.vendor, class: "col-md-2" %>
+          <% else %>
+          <%= link_to image_tag('profile.png', size: "100x100"), deal.vendor, class: 'img-circle col-md-2' %>
         <% end %>
         <div id="dealvendorname col-md-2">
           <%= link_to deal.vendor.name, deal.vendor %>
