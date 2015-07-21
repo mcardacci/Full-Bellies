@@ -1,11 +1,21 @@
 <div class="container">
   <div id="profile-top-bar" class="row">
 
-    <div class="col-md-4">
+<!--     <div class="col-md-4">
       <h1 id="welcome-user">Hello!</h1>
     </div>
+    <div class="col-md-4"></div> -->
 
-    <div class="col-md-4"></div>
+    <div class="col-md-8">
+      <% if current_user %>
+        <% favorites_deals(@user).each do |deal| %>
+          <%=render partial: '/deals/deal', locals: {deal: deal} %>
+        <% end %>
+      <% else %>
+        <h1 id="welcome-user">Hello!</h1>
+      <% end %>
+    </div>
+
 
     <div class="col-md-4 text-center">
       <%= render partial: 'user/profile_pic', locals: {user: @user} %>
