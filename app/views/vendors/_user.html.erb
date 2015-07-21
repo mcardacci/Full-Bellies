@@ -1,8 +1,31 @@
-<h1><%= vendor.name %></h1>
-<h4><%= vendor.bio %></h4>
-<h6>address: <%= vendor.address %></h6>
-<h6>phone: <%= vendor.phone_number %></h6>
-<h4>Current Deals</h4>
-<% current_deals.each do |deal| %>
-  <%=render partial: '/deals/deal', locals: {deal: deal} %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div id="last-five" class="col-md-3">
+      <h1><%= vendor.name %></h1>
+      <h5>address:</h5>
+      <h6><%= vendor.address %></h6>
+      <h5>phone:</h5>
+      <h6> <%= vendor.phone_number %></h6>
+      <h5>about:</h5>
+      <h6><%= vendor.bio %></h6>
+    </div>
+    <div class="col-md-6 text-center">
+      <div class="vendor-map">
+        <div id="panel">
+          <input type="hidden" id="address" type="textbox" value="<%= @vendor.address %>">
+        </div>
+        <div id="map-canvas"></div>
+      </div>
+    </div>
+    <div id="considerations" class="col-md-3">
+      <h3>Things to Consider When Purchasing:</h3>
+      <ul>
+        <li>Leave yourself plenty of time to get to the store and pick up your food.</li>
+        <li>Contact the vendor who posted the deal with any questions or concerns.</li>
+        <li>Ask your vendor if they are open to delivering the good purchased.</li>
+        <li>Use solid judgement, don't buy anything you won't be able to pick up or use.</li>
+        <li>Read our <a href="#">User terms and conditions</a>.</li>
+      </ul>
+    </div>
+  </div>
+</div>

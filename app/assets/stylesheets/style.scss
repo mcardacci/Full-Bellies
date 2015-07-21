@@ -49,7 +49,7 @@
 }
 
 #signup-info {
-  padding-left: 5%;
+  padding-left: 2%;
 }
 
 .alert {
@@ -80,9 +80,25 @@
 
 #stripebuttondiv {
   text-align: center;
-  border: 3px solid #d43f3a;
-  border-radius: 3px;
-  background-color: yellow;
+}
+
+#stripebuttondiv h1 {
+  color: #2C6700;
+  font-family: 'Pacifico', cursive;
+}
+
+#considerations {
+  background-color: #E5E4D7;
+  padding-bottom: 20px;
+}
+
+#last-five {
+  background-color: #E5E4D7;
+  height: 350px;
+}
+
+.vendor-map {
+  padding-left: 12%;
 }
 
 .pac-container {
