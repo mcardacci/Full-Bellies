@@ -108,7 +108,7 @@ class VendorsController < ApplicationController
   private
 
     def vendor_params
-      params.fetch(:vendor, {}).permit(:username, :password, :email, :name, :address, :phone_number, :avatar, :password_confirmation)
+      params.fetch(:vendor, {}).permit(:username, :password, :email, :name, :address, :phone_number, :bio, :avatar, :password_confirmation)
     end
 
 end
