@@ -1,4 +1,32 @@
-<h1>Our Mission and Vision</h1>
+<div id="mission-banner" class="container">
+  <h1 id="mission-title">Mission</h1>
+  <div class="container">
+  </div>
+</div>
+<div id="mission-body" class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h1 id="mission-body-title">The Problem:</h1>
+        <ul>
+          <li><h4>Good businesses lose money.</h4></li>
+          <li><h4>Good food goes to waste.</h4></li>
+          <li><h4>Good people go hungry.</h4></li>
+          <li><h4>Good environments get impacted.</h4></li>
+        </ul>
+        <hr>
+        <h4>
+          Our mission is to help alieviate these negative impacts and to help bring a partial solution to a multi-billion dollar problem. Our hope is that vendors will reach out to their local communities to help off-load parts of their expiring product base.
+        </h4>
+        <h4>
+          This 'just-in-time' sales process will help the business turn a partial profit from what would be arguably thrown in the trash. Outside of the economic impact, the humanitarian side is evident as well. Helping to connect those in lower economic brackets access quality food and lower prices.
+        </h4>
+    </div>
+    <div class="col-md-5 text-center">
+      <%= link_to image_tag('foodwaste.png', size: '550x400'), class: "mission-img" %>
+      <h4>source: <a href="http://www.endhunger.org/PDFs/2014/USDA-FoodLoss-2014.pdf">USDA</a></h4>
+    </div>
+  </div>
+</div>
 
 <%= render 'vendor_login', locals: {@user => @user, @vendor => @vendor}%>
 <%= render 'user_login', locals: {@user => @user, @vendor => @vendor}%>
