@@ -1,13 +1,12 @@
-<div id="usersessionform" class="container">
-  <%= form_for @user, url: '/login_user' do |f|%>
-    <div class="form-group">
-      <%= f.label :username, 'Username:' %><br>
-      <%= f.text_field :username, class: "form-control" %><br>
-    </div>
-    <div class="form-group">
-      <%= f.label :password, 'Password:' %><br>
-      <%= f.password_field :password, class: "form-control" %><br>
-    </div>
-    <%= f.submit 'Log In!', class: 'btn btn-success' %>
-  <% end %>
-</div>
+<%= form_for @user, url: '/login_user' do |f|%>
+  <div class="form-group">
+    <%= f.label :username, 'Username:' %><br>
+    <%= f.text_field :username, class: "form-control" %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, 'Password:' %><br>
+    <%= f.password_field :password, class: "form-control" %><br>
+  </div>
+  <%= f.submit 'Log In!', class: 'btn btn-success' %>
+<% end %>
+
