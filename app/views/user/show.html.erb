@@ -6,8 +6,7 @@
     </div>
     <div class="col-md-4"></div> -->
 
-    <div class="col-md-8">
-      <div class="well">
+    <div class="col-md-8" id="user_deals">
       <% if current_user %>
         <h4>Current Deals</h4>
         <% favorites_deals(@user).each do |deal| %>
@@ -16,7 +15,6 @@
       <% else %>
         <h1 id="welcome-user">Hello!</h1>
       <% end %>
-      </div>
     </div>
 
 
