@@ -5,6 +5,7 @@ RSpec.describe UserMailer, :type => :mailer do
     # ActionMailer::Base.delivery_method = :test
     # ActionMailer::Base.perform_deliveries = true
     ActionMailer::Base.deliveries = []
+    @deliveries = ActionMailer::Base.deliveries
     @vendor = create(:vendor)
     @deal = create(:deal)
     @vendor.deals << @deal
@@ -14,19 +15,23 @@ RSpec.describe UserMailer, :type => :mailer do
   end
 
   after(:each) do
-    ActionMailer::Base.deliveries.clear
+    @deliveries.clear
   end
 
   it "sends an email" do
-    expect(ActionMailer::Base.deliveries.count).to eq(1)
+    expect(@deliveries.count).to eq(1)
   end
 
-  it 'renders the receiver email' do
-    # expect(response)
+  it 'renders the receiver name' do
+    expect(@deliveries.first.from).to eq(["fullbellies@example.com"])
   end
 
-  it 'should set the title to the corerct title' do
-    expect(ActionMailer::Base.deliveries.first.title).to eq(@deal.title)
+  it 'renders the subject of the email should contain the vendor name' do
+    expect(@deliveries.first.subject).to include(@vendor.name)
+  end
+
+  it 'should include a link to full bellies in the body' do
+    expect(@deliveries.first.body).to include("https://afternoon-meadow-3523.herokuapp.com/")
   end
 end
 
