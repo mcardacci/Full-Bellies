@@ -3,8 +3,8 @@
   <%= hidden_field_tag :title, @deal.title %><br/>
   <%= hidden_field_tag :description, @deal.description %><br/>
   <%= label_tag :quantity %><br/>
-  <input type="number" name="quantity" id="purchaseitemquantity" min="0" max= <%=@deal.item_quantity%> > <br/>
-  <%= label_tag :price %>
+  <input type="number" name="quantity" id="purchaseitemquantity" class="form-control"min="0" max= <%=@deal.item_quantity%> > <br/>
+  <%= label_tag :price %> $
   <span id="purchaseitemprice">0</span>
     <br/>
   <script id='stripeform'src="https://checkout.stripe.com/checkout.js" class="stripe-button"
