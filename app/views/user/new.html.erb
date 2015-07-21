@@ -1,18 +1,24 @@
-<h1>user new page</h1>
-<%= form_for @user, url: {action: "create", controller:"user"}, html: {method: "post"} do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %><br/>
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number %><br/>
-  <%= f.label :email %>
-  <%= f.text_field :email %><br/>
-  <%= f.label :password %>
-  <%= f.password_field :password %><br/>
-  <%= f.label :password, 'Confirm Password' %>
-  <%= f.password_field :password_confirmation %><br/>
-  <%= f.submit %>
-<% end %>
-
-<% if flash[:notice] %>
-	<%= flash[:notice] %>
-<% end %>
+<div id="newuserform" class="container">
+  <h1>Signup</h1>
+  <%= form_for @user, url: {action: "create", controller:"user"}, html: {method: "post"} do |f| %>
+    <div class="form-group">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: "form-control" %><br/>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number, class: "form-control" %><br/>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %><br/>
+    </div>
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %><br/>
+      <%= f.label :password, 'Confirm Password' %>
+      <%= f.password_field :password_confirmation, class: "form-control" %><br/>
+    </div>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>
