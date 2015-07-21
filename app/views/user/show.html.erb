@@ -10,7 +10,7 @@
     <div class="col-md-8" id="user_deals">
       <% if current_user %>
         <% favorites_deals(@user).each do |deal| %>
-          <%=render partial: '/deals/user_deals', locals: {deal: deal} %>
+          <%=render partial: '/deals/deal', locals: {deal: deal} %>
         <% end %>
       <% else %>
         <h1 id="welcome-user">Hello!</h1>
