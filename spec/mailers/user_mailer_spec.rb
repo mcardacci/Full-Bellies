@@ -34,7 +34,7 @@ RSpec.describe UserMailer, :type => :mailer do
     end
   end
 
-  describe "email_vendor" do
+  describe "email_followers" do
     before(:each) do
       ActionMailer::Base.deliveries = []
       @deliveries = ActionMailer::Base.deliveries
