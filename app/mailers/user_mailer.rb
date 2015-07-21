@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
     @vendor = Vendor.find(deal.vendor_id)
     email = @vendor.email
     @url  = 'https://afternoon-meadow-3523.herokuapp.com/'
-    mail(to: email, subject: "Ahoy, #{@vendor.name}! There's been a purhase")
+    mail(to: email, subject: "Ahoy, #{@vendor.name}! There's been a purchase")
   end
 
   def email_followers(deal)
