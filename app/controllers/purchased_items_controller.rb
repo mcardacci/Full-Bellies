@@ -14,21 +14,15 @@ class PurchasedItemsController < ApplicationController
       purchased_item = PurchasedItem.create(purchased_item_params)
       purchased_item.update_attributes(price: calculate_price(params[:quantity], deal), user_id: current_user.id)
 
-
-
-      customer = Stripe::Customer.create(
-        :email => current_user.email,
-        :card  => params[:stripeToken]
-      )
-
-      charge = Stripe::Charge.create(
-        :customer    => customer.id,
+      Stripe.api_key = ENV['STRIP_SECRET_KEY']
+      charge = Stripe::Charge.create({
         :amount      => calculate_stripe_amount(params[:quantity], deal),
-        :description => deal.vendor.name,
-        :currency    => 'usd'
+        :currency    => 'usd',
+        :source => params[:stripeToken]},
+        stripe_account: deal.vendor.stripe_user_id
       )
       flash[:success] = "Your purchase was completed successfully!"
-      UserMailer.email_vendor(deal, purchased_item).deliver_now
+      # UserMailer.email_vendor(deal, purchased_item).deliver_now
       redirect_to user_path(current_user.id)
     else
       flash[:error] = "There was an error with your purchase. Please check the expiration time and quantity to make sure you're making a valid purchase"
