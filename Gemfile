@@ -41,6 +41,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~>4.4.1'
+  gem 'sms-spec'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
