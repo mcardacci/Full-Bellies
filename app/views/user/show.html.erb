@@ -8,6 +8,7 @@
 
     <div class="col-md-8">
       <% if current_user %>
+        <h4>Current Deals</h4>
         <% favorites_deals(@user).each do |deal| %>
           <%=render partial: '/deals/deal', locals: {deal: deal} %>
         <% end %>
