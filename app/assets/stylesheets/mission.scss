@@ -1,0 +1,29 @@
+#mission-banner {
+  background: image-url('banner.png');
+  background-size: contain;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+#mission-title {
+  font-family: 'Pacifico', cursive;
+  color: #ffff00;
+  font-size: 100px;
+}
+
+#mission-body {
+  margin-top: 4em;
+}
+
+#mission-body-title {
+  font-family: 'Pacifico', cursive;
+}
+
+.mission-mig {
+  padding-right: 2em;
+}
