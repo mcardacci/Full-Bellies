@@ -34,7 +34,7 @@ FullBellies uses a number of open source projects to work properly:
 * [Sendgrid] - transactional and marketing email through one reliable platform
 * [Paperclip] - easy file attachment library for Active Record
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [Google Maps] - a seamless api that provides directions, interactive maps, and satellite/aerial imagery of many countries. 
+* [Google Maps] - a seamless api that provides interactive maps, and satellite/aerial imagery of most countries. 
 
 ### Version
 1.0.0
