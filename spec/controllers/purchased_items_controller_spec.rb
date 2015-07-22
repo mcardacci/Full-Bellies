@@ -1,11 +1,6 @@
 require 'rails_helper'
 
 describe PurchasedItemsController do
-  before(:each) do
-    deal = create(:deal)
-    @vendor = create(:vendor)
-    @user = create(:user)
-  end
   describe 'POST #create' do
     it "should return you to the current_user's profile" do
       deal = create(:deal)
