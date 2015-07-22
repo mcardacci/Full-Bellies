@@ -34,8 +34,7 @@
       <div id="purchase-form-area">
       </div>
       <% if current_vendors_deal?(@deal) %>
-        <a href="#"><button data-toggle="modal" data-target="#editDeal" class="btn-sm btn-lg btn-primary"></button></a>
-        <%= link_to 'edit', edit_deal_path(@deal.id), class: 'btn-sm btn-lg btn-primary', id: 'editDeal' %>
+        <a href="#" data-toggle="modal" data-target="#editDeal" class="btn-sm btn-lg btn-primary">Edit</a>
         <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE', class: 'btn-sm btn-lg btn-danger', data: {confirm: "Are you sure you want to delete this deal?"}  %>
       <% end %>
       </div>
