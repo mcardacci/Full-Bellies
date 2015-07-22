@@ -1,5 +1,5 @@
 <nav id="nav-top" class="collapse navbar-collapse" role="banner">
-  <a href="/" class="navbar-brand">FullBellies</a>
+  <a href="/" class="navbar-brand">Full-Bellies</a>
   <% if session[:user_id] || session[:vendor_id] %>
     <ul id="nav-top" class="nav navbar-nav">
       <li><%= link_to 'Logout', logout_path, method: 'delete' %></li>

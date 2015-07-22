@@ -6,11 +6,11 @@
 }
 
 #banner{
-  background: image-url('banner.png');
+  background: image-url('banner2.png');
   background-size: contain;
   background-size: cover;
-  text-align: center;
-  vertical-align: middle;
+  /*text-align: center;*/
+  /*vertical-align: middle;*/
   line-height: 110px;
   width: 100%;
   padding-bottom: 100px;
@@ -18,19 +18,29 @@
 }
 
 #banner-title{
-  color: #ffff00;
-  padding-top: 20px;
+  color: #8cbd16;
+  padding-top: 45px;
   padding-bottom: 30px;
   font-family: 'Pacifico', cursive;
   font-size: 100px;
+  /*padding-left: 50%;*/
+}
+
+#banner-sub-title {
+  color: #8cbd16;
+  padding-top: 20px;
+  font-size: 35px;
+  font-family: 'Pacifico', cursive;
+  /*padding-left: 50%;*/
 }
 
 #nav-top a {
-  color: inherit;
+  color: #8cbd16;
+  font-weight: bold;
 }
 
 #nav-top {
-  background-color: #E5E4D7;
+  background-color: white;
 }
 
 #glyph-container {
