@@ -76,6 +76,15 @@
   transform: rotate(-20deg);
 }
 
+#dealindexahoy {
+  color: #92CD00;
+  font-size: 65px;
+  font-family: 'Pacifico', cursive;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  -webkit-transform: rotate(-20deg); /* Safari */
+  transform: rotate(-20deg);
+}
+
 #profile-top-bar{
   padding-top: 30px;
   padding-bottom: 30px;
@@ -117,13 +126,11 @@
 }
 
 #dealvendorname {
-  width: 30%;
   margin-right: 10px;
   margin-left: 10px;
 }
 
 #dealindexitem {
-  width: 80%;
   border: 1px solid #e0e0e0;
   background-color: #fafafa;
   margin-top: 1em;
@@ -141,7 +148,6 @@
 }
 
 #dealindexitem li {
-  padding-top: 25px;
   padding-bottom: 25px;
   display: block;
   height: 10em;
@@ -149,7 +155,6 @@
 
 #dealindexitems {
   display: inline-block;
-  width: 50%;
 }
 
 #dealprofilepicture {
@@ -174,18 +179,20 @@
 }
 
 #dealindexinfo {
-  width: 40%;
+  position: fixed;
   display: inline-block;
-  margin-right: 0px;
+}
+
+#dealindexinfo #importanttext{
+  position: fixed;
+  margin-right: 5em;
   margin-top: 1em;
   margin-bottom: 1em;
   vertical-align: top;
   margin-left: 5em;
-  position: fixed;
-  padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
-  height: 22em;
+  padding-bottom: 2em;
   box-shadow: -1px 1px 3px #d3d3d3;
   background-color: #FFCF79;
 }
@@ -193,9 +200,8 @@
 #dealwelcome {
   display: inline-block;
   margin-right: 0px;
-  position: fixed;
-  padding-top: 23em;
-  padding-left: 2em;
+  padding-left: 7em;
+  padding-bottom: 6em;
 }
 
 #dealwelcome h2 {
@@ -212,8 +218,10 @@
   padding-bottom: 10px;
 }
 
-#dealindexitem div {
-  margin-left: 10em;
+#deal-index-title {
+  font-size: 35px;
+  font-family: 'Pacifico', cursive;
+  padding-bottom: 10px;
 }
 
 #dealvendorimage{
@@ -222,18 +230,19 @@
 }
 
 #dealcontent {
-  margin: 2em;
-  width: 40%;
   display: inline-block;
   vertical-align: top;
-  margin-right: 30px;
+  margin-right: px;
   border: 1px solid #e0e0e0;
   background-color: #fafafa;
   box-shadow: -1px 1px 3px #d3d3d3;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+}
+
+#indexdealcontent {
+  display: inline-block;
+  text-align:center;
+  padding-top: 7px;
 }
 
 #dealpictures {
@@ -241,6 +250,11 @@
   display: inline-block;
   margin-left: 7em;
 
+}
+
+#dealpicture {
+  margin-right: 5em;
+  padding-top: 25px;
 }
 /*neon green 92CD00*/
 /*grey E5E4D7*/

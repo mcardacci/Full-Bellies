@@ -1,23 +1,27 @@
-<div id="dealindexpage">
-  <div id="dealindexitems">
+<div id="dealindexpage" class="col-md-12 col-xs-5">
+  <div id="dealindexitems" class="col-md-6">
     <% @deals.each_with_index do |deal, index| %>
       <%=render partial: '/deals/deal', locals: {deal: deal, index: index} %>
     <% end %>
   </div>
-  <div id="dealindexinfo" class="container">
-    <h2 id="deal-title">Important things to consider:</h2>
-    <ul>
-      <li><h4>If you make a purchase leave plenty of time to pick up.</h4></li>
-      <li><h4>If you cannot pick up, contact the vendor to see if they will hold the item for you.</h4></li>
-      <li><h4>If you need to cancel your purchase contact the vendor.</h4></li>
-      <li><h4>Buy items you are going to consume immediately.</h4></li>
-      <li><h4><a href="#">Click here</a> for all terms and conditions.</h4></li>
-    </ul>
+  <div id="dealindexinfo" class="container col-md-6">
+    <div id="dealwelcome">
+      <h1 id="dealindexahoy">A'hoy!</h1>
+      <h2 id="dealindexahoy">Grab a Deal!</h2>
+    </div>
+    <div id="importanttext">
+      <h4 id="deal-index-title">Important things to consider:</h4>
+      <ul>
+        <li><h5>If you make a purchase leave plenty of time to pick up.</h5></li>
+        <li><h5>If you cannot pick up, contact the vendor to see if they will hold the item for you.</h5></li>
+        <li><h5>If you need to cancel your purchase contact the vendor.</h5></li>
+        <li><h5>Buy items you are going to consume immediately.</h5></li>
+        <li><h5><a href="#">Click here</a> for all terms and conditions.</h5></li>
+      </ul>
+    </div>
+
   </div>
-  <div id="dealwelcome">
-    <h1 id="welcome-user">A'hoy!</h1>
-    <h2 id="welcome-user">Grab a Deal!</h2>
-  </div>
+
 </div>
 
 <!-- renders modal for login (user & vendor) -->
