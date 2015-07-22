@@ -78,7 +78,7 @@
 
 #dealindexahoy {
   color: #92CD00;
-  font-size: 80px;
+  font-size: 65px;
   font-family: 'Pacifico', cursive;
   -ms-transform: rotate(-20deg); /* IE 9 */
   -webkit-transform: rotate(-20deg); /* Safari */
@@ -179,16 +179,20 @@
 }
 
 #dealindexinfo {
-  display: inline-block;
   position: fixed;
-  margin-right: 0px;
+  display: inline-block;
+}
+
+#dealindexinfo #importanttext{
+  position: fixed;
+  margin-right: 5em;
   margin-top: 1em;
   margin-bottom: 1em;
   vertical-align: top;
   margin-left: 5em;
   padding-right: 20px;
   padding-left: 20px;
-  height: 22em;
+  padding-bottom: 2em;
   box-shadow: -1px 1px 3px #d3d3d3;
   background-color: #FFCF79;
 }
@@ -196,7 +200,8 @@
 #dealwelcome {
   display: inline-block;
   margin-right: 0px;
-  padding-left: 2em;
+  padding-left: 7em;
+  padding-bottom: 6em;
 }
 
 #dealwelcome h2 {
@@ -209,6 +214,12 @@
 
 #deal-title {
   font-size: 40px;
+  font-family: 'Pacifico', cursive;
+  padding-bottom: 10px;
+}
+
+#deal-index-title {
+  font-size: 35px;
   font-family: 'Pacifico', cursive;
   padding-bottom: 10px;
 }
