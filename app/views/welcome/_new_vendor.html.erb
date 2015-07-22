@@ -1,25 +1,25 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-5 form-group">
       <%= form_for @vendor do |f|%>
         <%= f.label :username, 'Username:' %><br>
-        <%= f.text_field :username %><br><br>
+        <%= f.text_field :username, class: 'form-control' %><br><br>
         <%= f.label :email, 'Email:' %><br>
-        <%= f.text_field :email %><br><br>
+        <%= f.text_field :email, class: 'form-control' %><br><br>
         <%= f.label :name, 'Business Name:' %><br>
-        <%= f.text_field :name %><br><br>
+        <%= f.text_field :name, class: 'form-control' %><br><br>
         <%= f.label :password, 'Password:' %><br>
-        <%= f.password_field :password %><br><br>
+        <%= f.password_field :password, class: 'form-control' %><br><br>
         <%= f.label :password, 'Confirm Password' %>
-        <%= f.password_field :password_confirmation %><br/>
+        <%= f.password_field :password_confirmation, class: 'form-control' %><br/>
         <%= f.label :address, 'Address:' %><br>
-        <%= f.text_field :address %><br><br>
+        <%= f.text_field :address, class: 'form-control' %><br><br>
         <%= f.label :phone_number, 'Phone Number:' %>
-        <%= f.text_field :phone_number %><br/><br/>
-        <%= f.submit 'Sign Up!', class: 'btn btn-warning' %>
+        <%= f.text_field :phone_number, class: 'form-control' %><br/><br/>
+        <%= f.submit 'Sign Up!', class: 'btn form-button' %>
       <% end %>
     </div>
-    <div id="signup-info" class="col-sm-4">
+    <div id="signup-info" class="col-sm-7">
       <h3>What You Get:</h3>
       <ul>
         <li>An additional market outside of your current business to sell food.</li>
