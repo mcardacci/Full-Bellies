@@ -1,3 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div id="deal-container" class="col-md-5 text-center">
+      <h2><%= @deal.title %></h2>
+      <p><%= @deal.description%></p>
+      <p>Quantity: <%= @deal.item_quantity %> | Cost Per Item: $<%= @deal.item_price %>0</p>
+      <p>Time Until Expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %></p>
+      <% if current_user %>
+        <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'btn-sm btn-lg btn-primary'%>
+      <% end %>
+      <% if current_vendors_deal?(@deal) %>
+        <%= link_to 'edit', edit_deal_path(@deal.id) %>
+        <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
+      <% end %>
+    </div>
+
+    <div class="col-md-2"></div>
+
+    <div class="col-md-5">
+
+    </div>
+  </div>
+</div>
+
+
 <div id="dealshowpage"class="container">
   <div id="dealcontent">
     <h2><%= @deal.title %></h2> <br/>
@@ -7,8 +32,10 @@
     <% if current_user %>
       <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'btn btn-lg btn-primary purchase-button'%>
     <% end %>
+
     <div id="purchase-form-area">
     </div>
+
     <div id="button-content">
       <% if current_vendors_deal?(@deal) %>
         <%= link_to 'edit', edit_deal_path(@deal.id) %>
@@ -16,6 +43,7 @@
       <% end %>
     </div>
   </div>
+
   <div id="dealpictures">
     <div id="dealprofilepicture">
       <% if @deal.vendor.avatar.exists? %>
