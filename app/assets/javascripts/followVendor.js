@@ -13,8 +13,11 @@ var follow = function(event) {
     method : 'PUT',
     dataType : 'json'
   }).done(function(response) {
-    $target.parent().children('p').children('span').html(response.upvote);
+    var index = $target.attr("id").replace('idx', '')
+    $(".follower-count." + index).html(response.upvote)
     $target.parent().children('.follow-button').hide();
+    //fix the hide glyph and make a hover button
+    $(".glyphicon.glyphicon-thumbs-up").hide();
     $target.parent().children('.unfollow-button').show();
   }).fail(function(error) {
     console.log("messed up");
@@ -31,7 +34,8 @@ var unfollow = function(event) {
     method : 'DELETE',
     dataType : 'json'
   }).done(function(response) {
-    $target.parent().children('p').children('span').html(response.downvote);
+     var index = $target.attr("id").replace('idx', '')
+    $(".follower-count." + index).html(response.downvote)
     $target.parent().children('.unfollow-button').hide();
     $target.parent().children('.follow-button').show();
   }).fail(function(error) {
