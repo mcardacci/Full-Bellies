@@ -30,7 +30,16 @@
       <div class="col-md-8" id="purchased_deals">
         <% if session[:user_id] == @user.id %>
           <% @user.purchased_items.each do |item| %>
-            <span> <h4><%= link_to item.title, deal_path(item.deal_id) %> - your cost: $<%= item.price %>0<h4></span>
+            <div class="user-purchased-deal">
+            <h4><%= link_to item.title, deal_path(item.deal_id) %> - your cost: $<%= item.price %>0<h4>
+              <div class="purchased-deal-pic">
+                <% if item.deal.vendor.avatar.exists? %>
+                  <%= image_tag item.deal.vendor.avatar.url(:medium), size: "50x50", class: 'img-rounded' %>
+                <% else %>
+                  <%= link_to image_tag('profile.png', size: '50x50'), "#pic-upload", :data => { :toggle =>"modal" } %>
+                <% end %>
+              </div>
+            </div>
           <% end %>
         <% end %>
       </div>

@@ -2,17 +2,20 @@
   height: 300px;
   width: 100%;
   overflow: scroll;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  text-align: center;
 }
-.user-show-graphic {
+
+.user-purchased-deal {
+  background-color: #fafafa;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  border: 2px solid #e0e0e0;;
+}
+
+.purchased-deal-pic {
 
 }
-   /*<div class="col-md-8" id="user_deals">
-      <% if current_user %>
-        <% favorites_deals(@user).each_with_index do |deal, index| %>
-          <%=render partial: '/deals/deal', locals: {deal: deal, index: index} %>
-        <% end %>
-      <% else %>
-        <h1 id="welcome-user">Hello!</h1>
-      <% end %>
-    </div>
-*/
+
+
