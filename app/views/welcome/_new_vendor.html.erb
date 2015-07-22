@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-4 form-group">
       <%= form_for @vendor do |f|%>
         <%= f.label :username, 'Username:' %><br>
         <%= f.text_field :username %><br><br>
@@ -19,7 +19,7 @@
         <%= f.submit 'Sign Up!', class: 'btn btn-warning' %>
       <% end %>
     </div>
-    <div id="signup-info" class="col-sm-4">
+    <div id="signup-info" class="col-sm-6">
       <h3>What You Get:</h3>
       <ul>
         <li>An additional market outside of your current business to sell food.</li>
