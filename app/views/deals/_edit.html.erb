@@ -1,5 +1,5 @@
-<div class="col-md-5" >
-  <h3>Create New Deal</h3>
+<div class="" >
+  <h3>Edit Deal</h3>
   <%= form_for @deal do |f| %>
     <%= f.label :title %><br/>
     <%= f.text_field :title, class: ("form-control") %><br/>
@@ -15,6 +15,6 @@
     <span>Time:<%= f.time_select :end_time, ignore_date: true, :ampm => true,class: ("form-control")  %></span>
     </div>
     <br/><br/>
-    <%= f.submit 'New Deal', class: "btn btn-primary" %>
+    <%= f.submit 'Update', class: "btn btn-primary" %>
   <% end %>
 </div>
