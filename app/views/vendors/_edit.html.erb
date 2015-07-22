@@ -15,4 +15,4 @@
   <%= f.file_field :avatar %><br><br>
   <%= f.submit 'Submit', class: 'btn btn-warning' %>
 <% end %>
-<%= link_to 'destroy vendor', vendor_path, method: 'delete' %>
+<%= link_to 'destroy vendor', vendor_path, method: 'delete', data: {confirm: "Are you sure?"} %>
