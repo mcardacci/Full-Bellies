@@ -16,8 +16,6 @@ var follow = function(event) {
     var index = $target.attr("id").replace('idx', '')
     $(".follower-count." + index).html(response.upvote)
     $target.parent().children('.follow-button').hide();
-    //fix the hide glyph and make a hover button
-    $(".glyphicon.glyphicon-thumbs-up").hide();
     $target.parent().children('.unfollow-button').show();
   }).fail(function(error) {
     console.log("messed up");
