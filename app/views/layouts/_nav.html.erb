@@ -1,5 +1,5 @@
 <nav id="nav-top" class="collapse navbar-collapse" role="banner">
-  <a href="/" class="navbar-brand">FullBellies</a>
+  <a href="/" class="navbar-brand">Full-Bellies</a>
   <% if session[:user_id] || session[:vendor_id] %>
     <ul id="nav-top" class="nav navbar-nav">
       <li><%= link_to 'Logout', logout_path, method: 'delete' %></li>
@@ -15,7 +15,7 @@
     <% end %>
   <% else %>
     <ul id="nav-top" class="nav navbar-nav">
-      <li data-toggle="modal" data-target="#userModal"><a href="#">Login</a></li>
+      <li data-toggle="modal" data-target="#vendorModal"><a href="#">Login</a></li>
       <li data-toggle="modal" data-target="#vendorSignup"> <a href="#">Are you a business?</a></li>
       <li data-toggle="modal" data-target="#signup"><a href="#">Signup</a></li>
 
