@@ -7,14 +7,7 @@
     <div class="col-md-4"></div> -->
 
     <h3>Current Deals</h3>
-    <div class="col-md-8" id="user_deals">
-      <% if current_user %>
-        <% favorites_deals(@user).each_with_index do |deal, index| %>
-          <%=render partial: '/deals/deal', locals: {deal: deal, index: index} %>
-        <% end %>
-      <% else %>
         <h1 id="welcome-user">Hello!</h1>
-      <% end %>
     </div>
 
 
@@ -35,14 +28,16 @@
 
   <div class="row">
 
-    <div class="col-md-4">
+    <div class="col-md-6">
       <h3>Purchased Deals:</h3>
       <hr>
-      <% if session[:user_id] == @user.id %>
-        <% @user.purchased_items.each do |item| %>
-          <span> <h4><%= link_to item.title, deal_path(item.deal_id) %> - your cost: $<%= item.price %>0<h4></span>
+      <div class="col-md-8" id="user_deals">
+        <% if session[:user_id] == @user.id %>
+          <% @user.purchased_items.each do |item| %>
+            <span> <h4><%= link_to item.title, deal_path(item.deal_id) %> - your cost: $<%= item.price %>0<h4></span>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
     <div class="col-md-6">
       <h3>Followed Vendors:</h3>
