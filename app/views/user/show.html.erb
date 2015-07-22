@@ -32,13 +32,7 @@
           <% @user.purchased_items.each do |item| %>
             <div class="user-purchased-deal">
               <h4><%= link_to item.title, deal_path(item.deal_id) %> - your cost: $<%= item.price %>0<h4>
-              <div class="purchased-deal-pic">
-                <% if item.deal.vendor.avatar.exists? %>
-                  <%= image_tag item.deal.vendor.avatar.url(:medium), size: "50x50", class: 'img-rounded' %>
-                <% else %>
-                  <%= link_to image_tag('profile.png', size: '50x50'), "#pic-upload", :data => { :toggle =>"modal" } %>
-                <% end %>
-              </div>
+
             </div>
           <% end %>
         <% end %>
@@ -51,6 +45,12 @@
         <% @user.favorites.each do |vendor| %>
           <div class="follow-vendors-contacts">
             <h4><%= link_to vendor.name, vendor_path(vendor.id) %> - contact: <%= vendor.email %><h4>
+            <% if vendor.avatar.exists? %>
+              <%= image_tag vendor.avatar.url(:medium), size: "50x50", class: 'img-rounded' %>
+            <% else %>
+              <%= link_to image_tag('profile.png', size: '50x50'), "#pic-upload", :data => { :toggle =>"modal" } %>
+            <% end %>
+
           </div>
         <% end %>
       <% end %>
