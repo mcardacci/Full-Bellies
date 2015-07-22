@@ -1,17 +1,13 @@
 <div class="container">
   <div id="profile-top-bar" class="row">
 
-<!--     <div class="col-md-4">
-      <h1 id="welcome-user">Hello!</h1>
-    </div>
-    <div class="col-md-4"></div> -->
 
-    <h3>Current Deals</h3>
+    <div class="user-show-graphic col-md-5">
         <h1 id="welcome-user">Hello!</h1>
     </div>
 
 
-    <div class="col-md-4 text-center">
+    <div class="col-md-7 text-center">
       <%= render partial: 'user/profile_pic', locals: {user: @user} %>
       <br>
       <hr>
@@ -29,9 +25,9 @@
   <div class="row">
 
     <div class="col-md-6">
-      <h3>Purchased Deals:</h3>
+      <h3>Purchased Deals</h3>
       <hr>
-      <div class="col-md-8" id="user_deals">
+      <div class="col-md-8" id="purchased_deals">
         <% if session[:user_id] == @user.id %>
           <% @user.purchased_items.each do |item| %>
             <span> <h4><%= link_to item.title, deal_path(item.deal_id) %> - your cost: $<%= item.price %>0<h4></span>
@@ -40,7 +36,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <h3>Followed Vendors:</h3>
+      <h3>Followed Vendors</h3>
       <hr>
       <% if session[:user_id] == @user.id %>
         <% @user.favorites.each do |vendor| %>
