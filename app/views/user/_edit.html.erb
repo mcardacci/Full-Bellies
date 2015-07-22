@@ -9,4 +9,5 @@
   <%= f.file_field :avatar %>
   <%= f.submit class: 'btn btn-warning' %>
 <% end %>
-<%= link_to 'delete profile', user_path, method: 'delete' %>
+<br>
+<%= link_to 'delete account', user_path, method: 'delete', data: {confirm: "Are you sure you want to delete your account?"}  %>
