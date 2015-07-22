@@ -8,14 +8,25 @@
 }
 
 .user-purchased-deal {
-  background-color: #fafafa;
+  background-color: #E5E4D7;
   margin-top: 1.2em;
   margin-bottom: 1.2em;
-  border: 2px solid #e0e0e0;;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
 }
 
-.purchased-deal-pic {
-
+#followed-vendors {
+  height: 300px;
+  overflow: scroll;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  text-align: center;
 }
 
-
+.follow-vendors-contacts {
+  background-color: #E5E4D7;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+}
