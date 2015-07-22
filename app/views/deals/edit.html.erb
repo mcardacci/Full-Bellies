@@ -1,14 +1,20 @@
-<%= form_for @deal do |f| %>
-  <%= f.label :title %><br/>
-  <%= f.text_field :title, value: @deal.title %><br/>
-  <%= f.label :description %><br/>
-  <%= f.text_area :description, cols:50, rows: 10, value: @deal.description %><br/>
-  <%= f.label :item_quantity, size: 6 %><br/>
-  <%= f.number_field :item_quantity, value: @deal.item_quantity %><br/>
-  <%= f.label :item_price %><br/>
-  <%= f.number_field :item_price, size: 6, step: 0.01, value: @deal.item_price %><br/>
-  <%= f.label :end_time %><br/>
-  <span>date: <%= f.date_select :end_time %></span><br/>
-  <span>time:<%= f.time_select :end_time, ignore_date: true%></span><br/>
-  <%= f.submit %>
-<% end %>
+<div class="form-group col-md-5 new-deal" >
+  <h3>Create New Deal</h3>
+  <%= form_for @deal do |f| %>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title, class: ("form-control") %><br/>
+    <%= f.label :description %><br/>
+    <%= f.text_area :description, cols:50, rows: 10, class: ("form-control")  %><br/>
+    <%= f.label :item_quantity, size: 6 %><br/>
+    <%= f.number_field :item_quantity, class: ("form-control") %><br/>
+    <%= f.label :item_price %><br/>
+    <%= f.number_field :item_price, size: 6, step: 0.01, class: ("form-control")  %><br/>
+    <%= f.label :end_time %><br/>
+    <div class="form-control">
+    <span>Date: <%= f.date_select :end_time, class: ("form-control")  %></span>
+    <span>Time:<%= f.time_select :end_time, ignore_date: true, :ampm => true,class: ("form-control")  %></span>
+    </div>
+    <br/><br/>
+    <%= f.submit 'New Deal', class: "btn btn-primary" %>
+  <% end %>
+</div>
