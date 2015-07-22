@@ -43,7 +43,7 @@ describe VendorsController do
 
         it "redirects to new vendor signup" do
           post :create, vendor: attributes_for(:invalid_vendor)
-      	  expect(response).to redirect_to new_vendor_path
+      	  expect(response).to redirect_to root_path
         end
       end
     end
