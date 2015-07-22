@@ -1,10 +1,10 @@
-<div id="dealindexpage">
-  <div id="dealindexitems">
+<div id="dealindexpage" class="col-md-12 col-xs-5">
+  <div id="dealindexitems" class="col-md-6">
     <% @deals.each_with_index do |deal, index| %>
       <%=render partial: '/deals/deal', locals: {deal: deal, index: index} %>
     <% end %>
   </div>
-  <div id="dealindexinfo" class="container">
+  <div id="dealindexinfo" class="container col-md-5">
     <h2 id="deal-title">Important things to consider:</h2>
     <ul>
       <li><h4>If you make a purchase leave plenty of time to pick up.</h4></li>
