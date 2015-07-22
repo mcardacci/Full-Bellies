@@ -9,7 +9,7 @@ FullBellies is an application that connects restuaurants and grocers directly wi
 #### [John Lyden](https://github.com/johnlyden)
 
 ##Resources
-[Heroku Deployment](https://afternoon-meadow-3523.herokuapp.com/)
+[Heroku Deployment](http://fullbellies.herokuapp.com/)
 
 [Trello Board](https://trello.com/b/KCCdiimC/full-bellies)
 
