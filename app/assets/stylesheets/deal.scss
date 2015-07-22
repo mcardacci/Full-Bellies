@@ -1,5 +1,40 @@
 #deal-container {
+  padding-top: 5%;
+}
+
+#deal-info {
   background-color: #E5E4D7;
   border-radius: 25px;
   padding-bottom: 20px;
+  margin-top: 50px;
 }
+
+#deal-vendor-info {
+  background-color: #E5E4D7;
+  border-radius: 15px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  width: initial;
+}
+
+#deal-map {
+  padding-top: 5%;
+}
+
+#welcome-column {
+
+}
+
+#deal-welcome-user {
+  color: #92CD00;
+  font-size: 50px;
+  font-family: 'Pacifico', cursive;
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  -webkit-transform: rotate(-20deg); /* Safari */
+  transform: rotate(-20deg);
+}
+
+.google-map {
+  margin: auto;
+}
+

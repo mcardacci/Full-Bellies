@@ -1,6 +1,26 @@
-<div class="container">
+<div id="deal-container" class="container">
   <div class="row">
-    <div id="deal-container" class="col-md-5 text-center">
+
+    <div class="col-md-5">
+      <h1 id="deal-welcome-user">One more click for food yummy food...</h1>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-5 text-center">
+      <div id="deal-vendor-info" class="container">
+      <% if @deal.vendor.avatar.exists? %>
+        <%= link_to image_tag(@deal.vendor.avatar.url(:thumb), class: "img-circle", id: "dealvendorimage"), @deal.vendor, class: "img-circle col-md-2" %>
+      <% else %>
+        <%= link_to image_tag('profile.png', size:'100x100'), @deal.vendor, class: 'img-circle' %>
+      <% end %>
+        <h3><%= link_to @deal.vendor.name, @deal.vendor %></h3>
+        <h5>Phone: <%= @deal.vendor.phone_number %></h5>
+        <h5>Address: <%= @deal.vendor.address %></h5>
+      </div>
+    </div>
+
+    <div id="deal-info" class="col-md-5 text-center">
       <h2><%= @deal.title %></h2>
       <p><%= @deal.description%></p>
       <p>Quantity: <%= @deal.item_quantity %> | Cost Per Item: $<%= @deal.item_price %>0</p>
@@ -9,62 +29,28 @@
         <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'btn-sm btn-lg btn-primary'%>
       <% end %>
       <% if current_vendors_deal?(@deal) %>
-        <%= link_to 'edit', edit_deal_path(@deal.id) %>
-        <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
+        <%= link_to 'edit', edit_deal_path(@deal.id), class: 'btn-sm btn-lg btn-primary' %>
+        <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE', class: 'btn-sm btn-lg btn-danger' %>
       <% end %>
     </div>
 
-    <div class="col-md-2"></div>
+    <div class="col-md-1"></div>
 
     <div class="col-md-5">
-
+      <div id="deal-map" class="container">
+        <div id="panel" class="google-map">
+          <input type="hidden" id="address" type="textbox" value="<%= @deal.vendor.address %>">
+        </div>
+        <div id="map-canvas" style="height: 250px;"></div>
+      </div>
     </div>
+
+
   </div>
 </div>
 
 
-<div id="dealshowpage"class="container">
-  <div id="dealcontent">
-    <h2><%= @deal.title %></h2> <br/>
-    <p><%= @deal.description%></p>
-    <p class="priceandquantity">Quantity: <%=@deal.item_quantity%>  |  Price Per Item: $<span id='dealprice'><%= @deal.item_price %></span></p>
-    <span class="priceandquantity"> Time Until Expiration: <%= distance_of_time_in_words(Time.now.utc,@deal.end_time) %> </span><br/>
-    <% if current_user %>
-      <%= link_to 'Purchase', new_deal_purchased_item_path(@deal.id), class: 'btn btn-lg btn-primary purchase-button'%>
-    <% end %>
 
-    <div id="purchase-form-area">
-    </div>
-
-    <div id="button-content">
-      <% if current_vendors_deal?(@deal) %>
-        <%= link_to 'edit', edit_deal_path(@deal.id) %>
-        <%= link_to 'delete', deal_path(@deal.id), method: 'DELETE' %>
-      <% end %>
-    </div>
-  </div>
-
-  <div id="dealpictures">
-    <div id="dealprofilepicture">
-      <% if @deal.vendor.avatar.exists? %>
-        <%= link_to image_tag(@deal.vendor.avatar.url(:thumb), class: "img-circle", id: "dealvendorimage"), @deal.vendor, class: "img-circle col-md-2" %>
-      <% end %>
-      <div>
-        <%= link_to @deal.vendor.name, @deal.vendor %>
-      </div>
-      <div>
-        <span>Phone: <%= @deal.vendor.phone_number %></span>
-      </div>
-      <div>
-        <span>Address: <%= @deal.vendor.address %></address>
-      </div>
-    </div>
-    <div id="panel">
-      <input type="hidden" id="address" type="textbox" value="<%= @deal.vendor.address %>">
-    </div>
-    <div id="map-canvas"></div>
-  </div>
-</div>
 <!-- renders modal for login (user & vendor) -->
 <%= render 'welcome/vendor_login', locals: {@user => @user, @vendor => @vendor}%>
 <%= render 'welcome/user_login', locals: {@user => @user, @vendor => @vendor}%>
