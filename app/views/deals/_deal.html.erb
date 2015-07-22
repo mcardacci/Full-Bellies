@@ -22,10 +22,8 @@
         <div id="dealindexfollow">
           <% if session[:user_id] %>
             <% if deal.vendor.favorite_vendors.exists?(user_id: session[:user_id]) %>
-              <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
               <%= link_to "Unfollow", unfollow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "unfollow-button", id: "idx#{index}", method: :delete %>
             <% else %>
-              <span class="glyphicon glyphicon-thumbs-up <%= index %>" aria-hidden="true"></span>
               <%= link_to "Follow Vendor", follow_path(session[:user_id], vendor_id: "#{deal.vendor.id}"), class: "follow-button", id: "idx#{index}", method: :put %>
             <% end %>
           <% end %>
