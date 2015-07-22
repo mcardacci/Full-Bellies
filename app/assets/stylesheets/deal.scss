@@ -1,12 +1,26 @@
+#deal-banner {
+  background: image-url('banner.png');
+  background-size: contain;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  height: 300px;
+  width: 100%;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
 #deal-container {
   padding-top: 5%;
 }
 
 #deal-info {
   background-color: #E5E4D7;
-  border-radius: 25px;
-  padding-bottom: 20px;
-  margin-top: 50px;
+  border-radius: 15px;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  height: 575px;
+  /*width: initial;*/
 }
 
 #deal-vendor-info {
@@ -19,6 +33,7 @@
 
 #deal-map {
   padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 #welcome-column {
@@ -26,6 +41,7 @@
 }
 
 #deal-welcome-user {
+  padding-top: 3%;
   color: #92CD00;
   font-size: 50px;
   font-family: 'Pacifico', cursive;
