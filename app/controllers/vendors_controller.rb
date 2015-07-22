@@ -19,8 +19,8 @@ class VendorsController < ApplicationController
       session[:vendor_id] = @vendor.id
       redirect_to vendor_path(@vendor)
     else
-      flash[:notice] = "There was a problem with your submission"
-      redirect_to new_vendor_path
+      flash[:error] = "There was a problem with your submission"
+      redirect_to root_path
     end
   end
 
