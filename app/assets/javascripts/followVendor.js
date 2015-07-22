@@ -13,7 +13,8 @@ var follow = function(event) {
     method : 'PUT',
     dataType : 'json'
   }).done(function(response) {
-    $target.parent().children('p').children('span').html(response.upvote);
+    var index = $target.attr("id").replace('idx', '')
+    $(".follower-count." + index).html(response.upvote)
     $target.parent().children('.follow-button').hide();
     $target.parent().children('.unfollow-button').show();
   }).fail(function(error) {
@@ -31,7 +32,8 @@ var unfollow = function(event) {
     method : 'DELETE',
     dataType : 'json'
   }).done(function(response) {
-    $target.parent().children('p').children('span').html(response.downvote);
+     var index = $target.attr("id").replace('idx', '')
+    $(".follower-count." + index).html(response.downvote)
     $target.parent().children('.unfollow-button').hide();
     $target.parent().children('.follow-button').show();
   }).fail(function(error) {

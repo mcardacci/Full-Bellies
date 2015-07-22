@@ -1,7 +1,7 @@
 <div id="dealindexpage">
   <div id="dealindexitems">
-    <% @deals.each do |deal| %>
-      <%=render partial: '/deals/deal', locals: {deal: deal} %>
+    <% @deals.each_with_index do |deal, index| %>
+      <%=render partial: '/deals/deal', locals: {deal: deal, index: index} %>
     <% end %>
   </div>
   <div id="dealindexinfo" class="container">
