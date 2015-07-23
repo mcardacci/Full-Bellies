@@ -16,8 +16,8 @@ class DealsController < ApplicationController
     @deal.update_attributes(vendor_id: current_vendor.id, end_time: deal_time)
     @vendor = current_vendor
     if @deal.save
-      # @vendor.send_sms(@deal)
-      # UserMailer.email_followers(@deal).deliver_now
+      @vendor.send_sms(@deal)
+      UserMailer.email_followers(@deal).deliver_now
       redirect_to current_vendor
     else
       flash[:notice] = "all fields are required."
