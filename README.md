@@ -51,3 +51,13 @@ Want to contribute? Great! Feel free to create an issue or open a pull request!
 [Twilio]:https://www.twilio.com/
 [Stripe]:https://stripe.com/
 [BCrypt]:https://github.com/codahale/bcrypt-ruby
+
+### To Do:
+
+- Integrate sharing with buffer
+- Oauth sign-in/up with twitter/FB
+- Search deals by geo
+- Search deals by vendor
+- Opt-in / out of email notificaitons
+- Opt-in / ou of sms notifications
+- Refactor current code
