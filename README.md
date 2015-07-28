@@ -5,7 +5,7 @@ FullBellies is an application that connects restuaurants and grocers directly wi
 ##Members
 #### [Lowell Mower](https://github.com/lowellmower)
 #### [Marc Cardacci](https://github.com/mcardacci)
-#### [Ross Wilson](https://github.com/grapefruitricky)
+#### [Ross Wilson](https://github.com/arosswilson)
 #### [John Lyden](https://github.com/johnlyden)
 
 ##Resources
