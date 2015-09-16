@@ -40,7 +40,7 @@ class VendorsController < ApplicationController
     @vendor = Vendor.find(params[:id])
     @vendor.assign_attributes(vendor_params)
     if @vendor.save
-      flash[:notice] = "Successfully edited account"
+      flash[:notice] = "Your account has been successfully edited"
       redirect_to vendor_path(@vendor)
     else
       render :edit
